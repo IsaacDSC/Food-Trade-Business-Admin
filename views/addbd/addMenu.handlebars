@@ -1,0 +1,113 @@
+<section id="dashboard">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+            {{>_navEditPages}}
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Adionar Cardápio ao Menu</h2>
+                        </div>
+                        <div class="p-2">
+                            <span class="d-none d-md-block">
+                                <a href="/visAdmin/vis-menuBurger" class="btn btn-outline-primary btn-sm">Visualizar</a>
+                            </span>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ações
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                    <a class="dropdown-item" href="/visAdmin/vis-menuBurger">Visualizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    {{!--                     <form action="/admin/" method="POST">
+                        <input name="id" type="hidden" value="{{slideshow.dataValues.id}}">
+                        <h4>Carregamento das Imagens</h2>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Imagem já carregadas</label>
+                                    <div class="custom-file">
+                                        <select name="" id="" class="form form-control">
+                                            <option value="{{slideshow.dataValues.img1}}">{{slideshow.dataValues.img1}}
+                                            </option>
+                                            <option value="{{slideshow.dataValues.img2}}">{{slideshow.dataValues.img2}}
+                                            </option>
+                                            <option value="{{slideshow.dataValues.img3}}">{{slideshow.dataValues.img3}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Nome da primeira Imagem e sua
+                                        extensão</label>
+                                    <input name="title" type="text" class="form-control" id="title"
+                                        placeholder="Digite o nome do arquivo e sua extensão ex: img.png"
+                                        value="{{slideshow.dataValues.title1_1}}" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Carregue a Imagem</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile" border="1">
+                                        <label class="custom-file-label" for="customFile">Carregar Arquivo</label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-info">Enviar</button>
+                            </div>
+                    </form> --}}
+                    <!-- ============================ Segundo Form ========================================= -->
+                    <h4 class="mt-5">Formulário</h4>
+                    <form action="/addbd/menu" method="post">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label><span class="text-danger">* </span>Classe de Menu</label>
+                                <select name="class" id="class" class="form-control">
+                                    <option value="Hamburgue">Hamburgue</option>
+                                    <option value="Pizza">Pizza</option>
+                                    <option value="Bebidas">Bebidas</option>
+                                    <option value="Sorvete">Sorvete</option>
+                                    <option value="Petisco">Petisco</option>
+                                    <option value="Combos">Combos</option>
+                                    <option value="Promoções">Promoções</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Nome</label>
+                                <input name="name" type="text" class="form-control" id="title"
+                                    placeholder="Digite o Nome do Aperitivo a ser Cadastrado" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>Descrição</label>
+                                <textarea name="desc" class="form-control" id="desc" cols="30" rows="10" required
+                                    placeholder="Digite a descrição principal"></textarea>
+                            </div>                              
+                        </div>  
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>Valor para Produzir</label>
+                                <input name="valorGasto" type="text" class="form-control" id="tabela1" placeholder="Digite o valor gasto para produzir este produto" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>Valor para Venda</label>
+                                <input name="valorVenda" type="text" class="form-control" id="title"
+                                    placeholder="Digite o Nome do Aperitivo a ser Cadastrado" required>
+                            </div>
+                        </div>                     
+
+                        <p class="mt-4">
+                            <span class="text-danger">* </span>Todos os campos são obrigatórios
+                        </p>
+                        <button type="submit" class="btn btn-warning">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

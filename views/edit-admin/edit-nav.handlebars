@@ -1,0 +1,164 @@
+<section id="dashboard">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+            {{>_navEditPages}}
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Editar Navegação</h2>
+                        </div>
+                        <div class="p-2">
+                            <span class="d-none d-md-block">
+                                <a href="/visAdmin/vis-headernav" class="btn btn-outline-primary btn-sm">Visualizar</a>
+                            </span>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ações
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                    <a class="dropdown-item" href="/visAdmin/vis-headernav">Visualizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <form action="/addbd/headernav" method="POST">
+                        <input name="_id" type="hidden" value="{{nav.dataValues.id}}">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>Nome da Img logotipo . extensão</label>
+                                <input name="logotipo" type="text" class="form-control" id="logotipo"
+                                    placeholder="Digite o nome do arquivo e sua extensão ex: img.png"
+                                    value="{{nav.dataValues.logotipo}}" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>Carregue o Logotipo</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFile" border="1">
+                                    <label class="custom-file-label" for="customFile">Carregar Arquivo</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>1ªNavegação</label>
+                                <input name="nav1" type="text" class="form-control" id="nav1"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.nav1}}" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>2ªNagação</label>
+                                <input name="nav2" type="text" class="form-control" id="nav2"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.nav2}}" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Titulo da 3ºNagação</label>
+                                <input name="nav3" type="text" class="form-control" id="nav3"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.nav3}}" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>3-1ªNavegação</label>
+                                <input name="subNav3_1" type="text" class="form-control" id="subNav3_1"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.subNav3_1}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>3-2ªNavegação</label>
+                                <input name="subNav3_2" type="text" class="form-control" id="subNav3_2"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.subNav3_2}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>3-2ªNavegação</label>
+                                <input name="subNav3_3" type="text" class="form-control" id="subNav3_3"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.subNav3_3}}"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-row mt-4">
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>4ºNagação</label>
+                                <input name="nav4" type="text" class="form-control" id="nav4"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.nav4}}" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>4_1ºNagação</label>
+                                <input name="sub4_1" type="text" class="form-control" id="sub4_1"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.nav4_1}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>4_2ºNagação</label>
+                                <input name="nav4_2" type="text" class="form-control" id="nav4_2"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.nav4_2}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>5ºNagação</label>
+                                <input name="nav5" type="text" class="form-control" id="nav5"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.nav5}}" required>
+                            </div>
+                        </div>
+<!-- =====================================Session Links===========================================  -->
+
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Link 1ªNavegação</label>
+                                <input name="url_nav1" type="text" class="form-control" id="url_nav1"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.url_nav1}}" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Link 2ªNagação</label>
+                                <input name="url_nav2" type="text" class="form-control" id="url_nav2"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.url_nav2}}" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Link 3-1ªNavegação</label>
+                                <input name="url_subNav3_1" type="text" class="form-control" id="url_subNav3_1"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.url_subNav3_1}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Link 3-2ªNavegação</label>
+                                <input name="url_subNav3_2" type="text" class="form-control" id="url_subNav3_2"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.url_subNav3_2}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Link 3-2ªNavegação</label>
+                                <input name="url_subNav3_3" type="text" class="form-control" id="url_subNav3_3"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.url_subNav3_3}}"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-row mt-4">
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Link 4-1ºNagação</label>
+                                <input name="url_subNav4_1" type="text" class="form-control" id="url_subNav4_1"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.url_subNav4_1}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Link 4-2ºNagação</label>
+                                <input name="url_subNav4_2" type="text" class="form-control" id="url_subNav4_2"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.url_subNav4_2}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Link 5ºNagação</label>
+                                <input name="urlNav5" type="text" class="form-control" id="urlNav5"
+                                    placeholder="Digite o nome da navegação" value="{{nav.dataValues.urlNav5}}" required>
+                            </div>
+                        </div>
+                        <p class="mt-4">
+                            <span class="text-danger">* </span>Todos os campos são obrigatórios
+                        </p>
+                        <button type="submit" class="btn btn-warning">Salvar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>

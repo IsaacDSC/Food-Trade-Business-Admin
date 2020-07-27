@@ -1,0 +1,153 @@
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif' rel='stylesheet' type='text/css'>
+   
+    <script type="text/javascript" >
+    
+    function limpa_formulário_cep() {
+            //Limpa valores do formulário de cep.
+            document.getElementById('rua').value=("");
+            document.getElementById('bairro').value=("");
+            document.getElementById('cidade').value=("");
+           
+    }
+
+    function meu_callback(conteudo) {
+        if (!("erro" in conteudo)) {
+            //Atualiza os campos com os valores.
+            document.getElementById('rua').value=(conteudo.logradouro);
+            document.getElementById('bairro').value=(conteudo.bairro);
+            document.getElementById('cidade').value=(conteudo.localidade);
+           
+        } //end if.
+        else {
+            //CEP não Encontrado.
+            limpa_formulário_cep();
+            alert("CEP não encontrado.");
+        }
+    }
+        
+    function pesquisacep(valor) {
+
+        //Nova variável "cep" somente com dígitos.
+        var cep = valor.replace(/\D/g, '');
+
+        //Verifica se campo cep possui valor informado.
+        if (cep != "") {
+
+            //Expressão regular para validar o CEP.
+            var validacep = /^[0-9]{8}$/;
+
+            //Valida o formato do CEP.
+            if(validacep.test(cep)) {
+
+                //Preenche os campos com "..." enquanto consulta webservice.
+                document.getElementById('rua').value="...";
+                document.getElementById('bairro').value="...";
+                document.getElementById('cidade').value="...";
+                
+               
+
+                //Cria um elemento javascript.
+                var script = document.createElement('script');
+
+                //Sincroniza com o callback.
+                script.src = '//viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+
+                //Insere script no documento e carrega o conteúdo.
+                document.body.appendChild(script);
+
+            } //end if.
+            else {
+                //cep é inválido.
+                limpa_formulário_cep();
+                alert("Formato de CEP inválido.");
+            }
+        } //end if.
+        else {
+            //cep sem valor, limpa formulário.
+            limpa_formulário_cep();
+        }
+    };
+
+    </script>
+    
+   
+  
+    <!-- Inicio do formulario -->
+      
+  
+    
+  
+
+	<div class="cd-panel cd-panel--from-right js-cd-panel-main">
+		<div class="cd-panel__header">
+			<h1>Entrega</h1>
+			<a href="#0" class="cd-panel__close js-cd-close">Close</a>
+		</div>
+
+		<div class="cd-panel__container">
+			<div class="cd-panel__content">
+               <h1>Complete com seus Dados</h1>
+				<form method="" action="">
+                    <div id="container1">
+                  
+                        <div class="group">      
+                            <input  type="text"  required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Nome</label>
+                            </div>
+                            
+                            <div class="group">      
+                            <input type="text"  maxlength="11" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Celular</label>
+                        </div>
+
+                        <div class="group">      
+                            <input name="cep" type="text" id="cep" value=""  maxlength="9"
+                            onblur="pesquisacep(this.value);" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>CEP</label>
+                            </div>
+
+                            <div class="group">      
+                            <input name="rua" type="text" id="rua"  required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Rua</label>
+                            </div>
+
+                            <div class="group">      
+                            <input  type="text"  required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>N°</label>
+                            </div>
+
+                            <div class="group">      
+                            <input  type="text"  required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Ponto de Referência</label>
+                            </div>
+
+                            <div class="group">      
+                            <input name="bairro" type="text" id="bairro" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Bairro</label>
+                            </div>
+
+                            <div class="group">      
+                            <input name="cidade" type="text" id="cidade" required>
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Cidade</label>
+                            </div>
+                        </div>
+                </form>
+			</div> <!-- cd-panel__content -->
+		</div> <!-- cd-panel__container -->
+	</div> <!-- cd-panel -->

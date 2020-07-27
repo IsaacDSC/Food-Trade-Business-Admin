@@ -1,0 +1,48 @@
+<section id="dashboard">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+            {{>_navEditPages}}
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Edição de Paginas</h2>
+                        </div>
+                        <div class="p-2">
+                            <span class="d-none d-md-block">
+                                <a href="/sobre/vis-sobre" class="btn btn-outline-primary btn-sm">Visualizar</a>
+                            </span>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ações
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                    <a class="dropdown-item" href="/sobre/vis-sobre">Visualizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <h2>Resetar as Paginas</h2>
+    <p>Ao entrar nesta pagina se estiver descomentado a models responsável por criar tables irá resetar as tabelas</p>
+    <ul>
+        <li><a href="/reset/headernav"><button class="btn btn-success">HeaderNav</button></a></li>
+        <li><a href="/reset/homeslideshow"><button class="btn btn-success">slideshow</button></a></li>
+        <li><a href="/reset/history"><button class="btn btn-success">History</button></a></li>
+        <li><a href="/reset/cardapiohome"><button class="btn btn-success">Cardapio Pagina Home</button></a></li>
+        <li><a href="/reset/footer"><button class="btn btn-success">Footer</button></a></li>
+        <li><a href="/reset/contato"><button class="btn btn-success">Contato</button></a></li>
+        <li><h4>Resetando Menus</h4></li>
+        <li><a href="/reset/menuburger"><button class="btn btn-success">Menu Burger</button></a></li>
+        <li><a href="/reset/menubebidas"><button class="btn btn-success">Menu Bebidas</button></a></li>
+        <li><a href="/reset/menupizzas"><button class="btn btn-success">Menu Pizzas</button></a></li>
+    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>

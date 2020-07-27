@@ -1,0 +1,295 @@
+<section id="dashboard">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+            {{>_navEditPages}}
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Editar Footes das Paginas</h2>
+                        </div>
+                        <div class="p-2">
+                            <span class="d-none d-md-block">
+                                <a href="/visAdmin/vis-footer" class="btn btn-outline-primary btn-sm">Visualizar</a>
+                            </span>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ações
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                    <a class="dropdown-item" href="/visAdmin/vis-footer">Visualizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <form action="/addbd/footerUpload" method="POST" enctype="multipart/form-data">
+                        <input name="id" type="hidden" value="{{slideshow.dataValues.id}}">
+                        <h4>Carregamento das Imagens</h2>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Imagem já carregadas</label>
+                                    <div class="custom-file">
+                                        <select name="" id="" class="form form-control">
+                                            <option value="{{slideshow.dataValues.img1}}">{{slideshow.dataValues.img1}}
+                                            </option>
+                                            <option value="{{slideshow.dataValues.img2}}">{{slideshow.dataValues.img2}}
+                                            </option>
+                                            <option value="{{slideshow.dataValues.img3}}">{{slideshow.dataValues.img3}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Nome da primeira Imagem e sua
+                                        extensão</label>
+                                    <input name="title" type="text" class="form-control" id="title"
+                                        placeholder="Digite o nome do arquivo e sua extensão ex: img.png"
+                                        value="{{slideshow.dataValues.title1_1}}" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Carregue a Imagem</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile" border="1">
+                                        <label class="custom-file-label" for="customFile">Carregar Arquivo</label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-info">Enviar</button>
+                            </div>
+                    </form>
+                    <!-- ============================ Segundo Form ========================================= -->
+                    <h4 class="mt-5">Editar Scripts Slide-Show</h4>
+                    <form action="/addbd/footer" method="post">
+                        <input name="id" type="hidden" value="{{footer.dataValues.id}}">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>Primeiro Titulo</label>
+                                <input name="title1" type="text" class="form-control" id="title1"
+                                    placeholder="Digite o nome da navegação" value="{{footer.dataValues.title1}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>Primeiro Titulo</label>
+                                <textarea name="describe1" id="describe1" cols="30" rows="10"
+                                    class="form-control">{{footer.dataValues.describe1}}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Horário de funcionamento</label>
+                                <input name="Hr_fucionamento" type="text" class="form-control" id="Hr_fucionamento"
+                                    placeholder="Digite o nome da navegação"
+                                    value="{{footer.dataValues.Hr_funcionamento}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Status de Funcionamento</label>
+                                <input name="status_funcionamento" type="text" class="form-control" id="status_funcionamento"
+                                    placeholder="Digite o nome da navegação"
+                                    value="{{footer.dataValues.status_funcionamento}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Dias de funcionamento (feriado etc...)</label>
+                                <input name="feriados_funcionamento" type="text" class="form-control" id="feriados_funcionamento"
+                                    placeholder="Digite o nome da navegação"
+                                    value="{{footer.dataValues.feriados_funcionamento}}" required>
+                            </div>
+                        </div>
+                        <h4 class="mt-5">Área Contato</h4>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Terceiro Titulo</label>
+                                <input name="title3" type="text" class="form-control" id="title3"
+                                    placeholder="Digite o nome da navegação" value="{{footer.dataValues.title3}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Endereço Completo</label>
+                                <input name="endereco_completo" type="text" class="form-control" id="endereco_completo"
+                                    placeholder="Digite o nome da navegação"
+                                    value="{{footer.dataValues.endereco_completo}}" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Nome do local no Google Maps</label>
+                                <input name="googlemasplocation" type="text" class="form-control" id="googlemasplocation"
+                                    placeholder="Digite o nome da navegação"
+                                    value="{{footer.dataValues.googlemapslocation}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Url do Google Maps</label>
+                                <input name="urlMaps" type="text" class="form-control" id="urlMaps"
+                                    placeholder="Digite o nome da navegação" value="{{footer.dataValues.urlMaps}}"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Numero Para Contato</label>
+                                <input name="number" type="text" class="form-control" id="number"
+                                    placeholder="Digite o nome da navegação" value="{{footer.dataValues.number}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Url do numero para contato</label>
+                                <input name="url_number" type="text" class="form-control" id="url_number"
+                                    placeholder="Digite o nome da navegação" value="{{footer.dataValues.url_number}}"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>E-mail Para Contato</label>
+                                <input name="email" type="text" class="form-control" id="email"
+                                    placeholder="Digite o nome da navegação" value="{{footer.dataValues.email}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Url do E-mail Para Contato</label>
+                                <input name="url_email" type="text" class="form-control" id="url_email"
+                                    placeholder="Digite o nome da navegação" value="{{footer.dataValues.url_email}}"
+                                    required>
+                            </div>
+                        </div>
+                        <h4 class="mt-5">Editar Icones</h4>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Icone Um</label>
+                                <input name="icon_contact1" type="text" class="form-control" id="icon_contact1"
+                                    placeholder="Icone um" value="{{footer.dataValues.icon_contact1}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Url Icone Um</label>
+                                <input name="url_icon1" type="text" class="form-control" id="url_icon1"
+                                    placeholder="Icone um" value="{{footer.dataValues.url_icon1}}" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Icone Dois</label>
+                                <input name="icon_contact2" type="text" class="form-control" id="icon_contact2"
+                                    placeholder="Icone dois" value="{{footer.dataValues.icon_contact2}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Url Icone Dois</label>
+                                <input name="url_icon2" type="text" class="form-control" id="url_icon2"
+                                    placeholder="Icone um" value="{{footer.dataValues.url_icon2}}" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Icone Tres</label>
+                                <input name="icon_contact3" type="text" class="form-control" id="icon_contact3"
+                                    placeholder="Icone Tres" value="{{footer.dataValues.icon_contact3}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Url Icone Tres</label>
+                                <input name="url_icon3" type="text" class="form-control" id="url_icon3"
+                                    placeholder="Icone Tres" value="{{footer.dataValues.url_icon3}}" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Icone Quatro</label>
+                                <input name="icon_contact4" type="text" class="form-control" id="icon_contact4"
+                                    placeholder="Icone Quatro" value="{{footer.dataValues.icon_contact4}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Url Icone Quatro</label>
+                                <input name="url_icon4" type="text" class="form-control" id="url_icon4"
+                                    placeholder="Icone Quatro" value="{{footer.dataValues.url_icon4}}" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Icone Cinco</label>
+                                <input name="icon_contact5" type="text" class="form-control" id="icon_contact5"
+                                    placeholder="Icone Cinco" value="{{footer.dataValues.icon_contact5}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Url Icone Cinco</label>
+                                <input name="url_icon5" type="text" class="form-control" id="url_icon5"
+                                    placeholder="Icone Cinco" value="{{footer.dataValues.url_icon5}}" required>
+                            </div>
+                        </div>
+                        <h4 class="mt-5">Editar a quinta navegação no footer</h4>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Titulo</label>
+                                <input name="title4" type="text" class="form-control" id="title4"
+                                    placeholder="5º Titulo" value="{{footer.dataValues.title4}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Instrução do campo(placeholder)</label>
+                                <input name="placeholder" type="text" class="form-control" id="placeholder"
+                                    placeholder="5º Titulo" value="{{footer.dataValues.placeholder}}" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Titulo do Botão</label>
+                                <input name="titlebtn" type="text" class="form-control" id="titlebtn"
+                                    placeholder="5º Titulo" value="{{footer.dataValues.titlebtn}}" required>
+                            </div>
+                        </div>
+                        <h4 class="mt-5">Editar Footer Contato</h4>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Titulo(1)</label>
+                                <input name="title5" type="text" class="form-control" id="title5"
+                                    placeholder="Titulo" value="{{footer.dataValues.title5}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Descrição(1)</label>
+                                <input name="desc1" type="text" class="form-control" id="desc1"
+                                    placeholder="Titulo" value="{{footer.dataValues.desc1}}" required>
+                            </div><div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Imagem(1)</label>
+                                <input name="imgIcon1" type="text" class="form-control" id="imgIcon1"
+                                    placeholder="Titulo" value="{{footer.dataValues.imgIcon1}}" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Titulo(2)</label>
+                                <input name="title6" type="text" class="form-control" id="title6"
+                                    placeholder="Titulo" value="{{footer.dataValues.title6}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Descrição(2)</label>
+                                <input name="desc2" type="text" class="form-control" id="desc2"
+                                    placeholder="Titulo" value="{{footer.dataValues.desc2}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Imagem(2)</label>
+                                <input name="imgIcon2" type="text" class="form-control" id="imgIcon2"
+                                    placeholder="Titulo" value="{{footer.dataValues.imgIcon2}}" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label><span class="text-danger">* </span>Titulo(3)</label>
+                                <input name="title7" type="text" class="form-control" id="title7"
+                                    placeholder="Titulo" value="{{footer.dataValues.title7}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Descrição(3)</label>
+                                <input name="desc3" type="text" class="form-control" id="desc3"
+                                    placeholder="Titulo" value="{{footer.dataValues.desc3}}" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Imagem(3)</label>
+                                <input name="imgIcon3" type="text" class="form-control" id="imgIcon3"
+                                    placeholder="Titulo" value="{{footer.dataValues.imgIcon3}}" required>
+                            </div>
+                        </div>
+                        <p class="mt-4">
+                            <span class="text-danger">* </span>Todos os campos são obrigatórios
+                        </p>
+                        <button type="submit" class="btn btn-warning">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

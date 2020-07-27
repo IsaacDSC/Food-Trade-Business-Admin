@@ -1,0 +1,169 @@
+<section id="dashboard">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+            {{>_navEditPages}}
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Visualizar Cardápio Home</h2>
+                        </div>
+                        <div class="p-2">
+                            <span class="d-none d-md-block">
+                                <a href="/admin/edit-cardapiohome" class="btn btn-outline-primary btn-sm">Editar </a>
+                            </span>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ações
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                    <a class="dropdown-item" href="/admin/edit-cardapiohome">Editar </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{>_msg}}
+                    <hr>
+
+                    <!-- Start Menu -->
+                    <div class="menu-box">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="heading-title text-center">
+                                        <h2>{{cardHome.dataValues.title}}</h2>
+                                        <p>{{cardHome.dataValues.subtitle}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="special-menu text-center">
+                                        <div class="button-group filter-button-group">
+                                            <button class="active" data-filter="*">Todos</button>
+                                            <button data-filter=".drinks">{{cardHome.dataValues.nav2}}</button>
+                                            <button data-filter=".lunch">{{cardHome.dataValues.nav3}}</button>
+                                            <button data-filter=".dinner">{{cardHome.dataValues.nav4}}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row special-list">
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img src="/images/{{cardHome.dataValues.img_item2_1}}" class="img-fluid"
+                                            alt="Image">
+                                        <div class="why-text">
+                                            <h4>{{cardHome.dataValues.title2_1}}</h4>
+                                            <p>{{cardHome.dataValues.desc_item2_1}}</p>
+                                            <h5>{{cardHome.dataValues.valor_item2_1}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img src="/images/{{cardHome.dataValues.img_item2_2}}" class="img-fluid"
+                                            alt="Image">
+                                        <div class="why-text">
+                                            <h4>{{cardHome.dataValues.title2_2}}</h4>
+                                            <p>{{cardHome.dataValues.desc_item2_2}}</p>
+                                            <h5>{{cardHome.dataValues.valor_item2_2}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid drinks">
+                                    <div class="gallery-single fix">
+                                        <img src="/images/{{cardHome.dataValues.img_item2_3}}" class="img-fluid"
+                                            alt="Image">
+                                        <div class="why-text">
+                                            <h4>{{cardHome.dataValues.title2_3}}</h4>
+                                            <p>{{cardHome.dataValues.desc_item2_3}}</p>
+                                            <h5>{{cardHome.dataValues.valor_item2_3}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img src="/images/{{cardHome.dataValues.img_item3_1}}" class="img-fluid"
+                                            alt="Image">
+                                        <div class="why-text">
+                                            <h4>{{cardHome.dataValues.title3_1}}</h4>
+                                            <p>{{cardHome.dataValues.desc_item3_1}}</p>
+                                            <h5>{{cardHome.dataValues.valor_item3_1}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img src="/images/{{cardHome.dataValues.img_item3_2}}" class="img-fluid"
+                                            alt="Image">
+                                        <div class="why-text">
+                                            <h4>{{cardHome.dataValues.title3_2}}</h4>
+                                            <p>{{cardHome.dataValues.desc_item3_2}}</p>
+                                            <h5>{{cardHome.dataValues.valor_item3_2}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid lunch">
+                                    <div class="gallery-single fix">
+                                        <img src="/images/{{cardHome.dataValues.img_item3_3}}" class="img-fluid"
+                                            alt="Image">
+                                        <div class="why-text">
+                                            <h4>{{cardHome.dataValues.title3_3}}</h4>
+                                            <p>{{cardHome.dataValues.desc_item3_3}}</p>
+                                            <h5>{{cardHome.dataValues.valor_item3_3}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img src="/images/{{cardHome.dataValues.img_item4_1}}" class="img-fluid"
+                                            alt="Image">
+                                        <div class="why-text">
+                                            <h4>{{cardHome.dataValues.title4_1}}</h4>
+                                            <p>{{cardHome.dataValues.desc_item4_1}}</p>
+                                            <h5>{{cardHome.dataValues.valor_item4_1}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img src="/images/{{cardHome.dataValues.img_item4_2}}" class="img-fluid"
+                                            alt="Image">
+                                        <div class="why-text">
+                                            <h4>{{cardHome.dataValues.title4_3}}</h4>
+                                            <p>{{cardHome.dataValues.desc_item4_3}}</p>
+                                            <h5>{{cardHome.dataValues.valor_item4_3}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 special-grid dinner">
+                                    <div class="gallery-single fix">
+                                        <img src="/images/{{cardHome.dataValues.img_item4_3}}" class="img-fluid"
+                                            alt="Image">
+                                        <div class="why-text">
+                                            <h4>{{cardHome.dataValues.title2_1}}</h4>
+                                            <p>{{cardHome.dataValues.desc_item2_1}}</p>
+                                            <h5>{{cardHome.dataValues.valor_item2_1}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
