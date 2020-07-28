@@ -5,38 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Site - Login</title>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="/css/bootstrap.mim.css">
-	<link rel="stylesheet" href="/css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="/css/style.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="/css/demo.css"> <!-- Demo style -->
-
-  <!-- Pagina de REgistro de Clientes -->
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="/css/register.css">
-<!-- Fim AddPagina de REgistos de Clientes -->
-
-  <!-- reference correct -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script defer src="/js/fontawesome-all.min.js"></script>
-    <link rel="stylesheet" href="/css/fontawesome.min.css">
-    {{#if user}}
-    <link rel="stylesheet" href="/css/dashboard.css">
-    {{else}}
-    <link rel="stylesheet" href="/css/signin.css">
-    {{/if}}
-
+  
 <body>
-    {{#if user}}
-    <div class="d-flex">
+  <div class="card-body">
         {{{body}}}
-    </div>
-    {{else}}
-    {{{body}}}
-    {{/if}}
 
+    </div>
 
   <script src="/js/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
 <script src="/js/main.js"></script> <!-- Resource JavaScript -->
