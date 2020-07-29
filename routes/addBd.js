@@ -253,15 +253,15 @@ router.post('/menu', (req, res) => {
         desc: req.body.desc,
         valorGasto: req.body.valorGasto,
         valorVenda: req.body.valorVenda,
-        lucro: req.body.valorGasto - req.body.valorVenda
+        lucro: req.body.valorVenda - req.body.valorGasto
     }).then(() => {
         //res.send('Enviado com sucesso')
         req.flash('success_msg', 'Cardápio enviado ao Menu com Sucesso!')
-        res.redirect('visAdmin/visMenu')
+        res.redirect('visAdmin/cardapios')
     }).catch((err) => {
         //res.send(err)
         req.flash('error_msg', 'Preencha corretamente o campo e tente enviar novamente!')
-        res.redirect('visAdmin/visMenu')
+        res.redirect('visAdmin/cardapios')
     })
 })
 

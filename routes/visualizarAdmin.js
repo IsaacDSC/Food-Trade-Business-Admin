@@ -75,7 +75,16 @@ router.get('/vis-cardapiohome', auth, (req, res) => {
 
 router.get('/cardapios', auth, (req, res) => {
     Menu.findAll().then((menu) => {
-        res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', menu: menu })
+        Menu.findAll({ where: { class: 'Hamburgue' } }).then((Burger) => {
+            if (Burger == null || Burger == undefined) {
+                res.send('Table Burger null or undefined')
+            } else {
+
+                res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', menu: menu, Burger: Burger })
+            }
+        }).catch((err) => {
+            res.send(err)
+        })
     }).catch((err) => {
         res.send(err)
     })
