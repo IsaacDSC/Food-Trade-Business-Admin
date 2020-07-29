@@ -79,8 +79,7 @@ router.get('/cardapios', auth, (req, res) => {
             if (Burger == null || Burger == undefined) {
                 res.send('Table Burger null or undefined')
             } else {
-
-                res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', menu: menu, Burger: Burger })
+                res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars' })
             }
         }).catch((err) => {
             res.send(err)
@@ -89,6 +88,38 @@ router.get('/cardapios', auth, (req, res) => {
         res.send(err)
     })
 })
+router.post('/cardapios', (req, res) => {
+    if (req.body.class == 'Hamburgue') {
+        Menu.findAll({ where: { class: 'Hamburgue' } }).then((Burger) => {
+            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Burger: Burger })
+        })
+    }
+    if (req.body.class == 'Pizza') {
+        Menu.findAll({ where: { class: 'Pizza' } }).then((Pizza) => {
+            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Pizza: Pizza })
+        })
+    }
+    if (req.body.class == 'Bebidas') {
+        Menu.findAll({ where: { class: 'Bebidas' } }).then((Burger) => {
+            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Burger: Burger })
+        })
+    }
+    if (req.body.class == 'Sorvete') {
+        Menu.findAll({ where: { class: 'Sorvete' } }).then((Burger) => {
+            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Burger: Burger })
+        })
+    }
+    if (req.body.class == 'Combos') {
+        Menu.findAll({ where: { class: 'Combos' } }).then((Burger) => {
+            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Burger: Burger })
+        })
+    }
+    if (req.body.class == 'Promocoes') {
+        Menu.findAll({ where: { class: 'Promocoes' } }).then((Burger) => {
+            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Burger: Burger })
+        })
+    }
 
+})
 
 module.exports = router

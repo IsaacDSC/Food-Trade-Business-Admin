@@ -43,27 +43,61 @@
 
                     <div class="contact-box">
                         <div class="container">
-                            <form action="/contato/contatopost" method="post">
-                                {{#each menu}}
-                                <h4>{{dataValues.class}}</h4>
-                                <h4>{{dataValues.name}}</h4>
-                                <h4>{{dataValues.desc}}</h4>
-                                <h4>{{dataValues.valorGasto}}</h4>
-                                <h4>{{dataValues.valorVenda}}</h4>
-                                <h4>Lucro de: R$ {{dataValues.lucro}}</h4>
-                                <hr>
-                                {{/each}}
+                            <form action="/visAdmin/cardapios" method="post">
+                                <div class="row">
+                                    <div class="form-group col-8">
+                                        <label for="class" class="text-center">selecione a classe de menu que deseja
+                                            Visualizar</label>
+                                        <br>
+                                        <select name="class" id="class" class="form-control">
+                                            <option value="Hamburgue">Hamburguer</option>
+                                            <option value="Pizza">Pizza</option>
+                                            <option value="Bebidas">Bebidas</option>
+                                            <option value="Doces">Doces</option>
+                                            <option value="combos">combos</option>
+                                            <option value="Promoces">Promoções</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-4">
+                                        <button class="btn btn-outline-success" style="width: 100%;">Procurar</button>
+                                    </div>
+                                </div>
+                            </form>
 
 
-                                <h2>Menu Burger</h2>                                                        
-                                {{#each Burger}}
-                                <h4>{{dataValues.name}}</h4>
-                                <h4>{{dataValues.desc}}</h4>
-                                <h4>{{dataValues.valorGasto}}</h4>
-                                <h4>{{dataValues.valorVenda}}</h4>
-                                <h4>{{dataValues.lucro}}</h4>
-                                <hr>
-                                {{/each}}
+                            {{!-- {{#each menu}}
+                            <h4>{{dataValues.class}}</h4>
+                            <h4>{{dataValues.name}}</h4>
+                            <h4>{{dataValues.desc}}</h4>
+                            <h4>{{dataValues.valorGasto}}</h4>
+                            <h4>{{dataValues.valorVenda}}</h4>
+                            <h4>Lucro de: R$ {{dataValues.lucro}}</h4>
+                            <hr>
+                            {{/each}} --}}
+
+                            {{#if Burger}}
+                            <h2>Menu Burger</h2>
+                            {{#each Burger}}
+                            <h4><strong>nome: </strong><small>{{dataValues.name}}</small></h4>
+                            <h4><strong>Descrição: </strong><small>{{dataValues.desc}}</small></h4>
+                            <h4><strong>Valor Gasto de Material: </strong> <small>R$ {{dataValues.valorGasto}}</small></h4>
+                            <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
+                            <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
+                            <hr>
+                            {{/each}}
+                            {{/if}}
+                           
+
+                            {{#if Pizza}}
+                            {{#each Pizza}}
+                            <h4><strong>nome: </strong><small>{{dataValues.name}}</small></h4>
+                            <h4><strong>Descrição: </strong><small>{{dataValues.desc}}</small></h4>
+                            <h4><strong>Valor Gasto de Material: </strong> <small>R$ {{dataValues.valorGasto}}</small></h4>
+                            <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
+                            <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
+                            <hr>
+                            {{/each}}
+                            {{/if}}
                         </div>
                     </div>
                 </div>
