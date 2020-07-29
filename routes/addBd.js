@@ -251,7 +251,9 @@ router.post('/menu', (req, res) => {
         class: req.body.class,
         name: req.body.name,
         desc: req.body.desc,
-        valor: req.body.valor
+        valorGasto: req.body.valorGasto,
+        valorVenda: req.body.valorVenda,
+        lucro: req.body.valorGasto - req.body.valorVenda
     }).then(() => {
         //res.send('Enviado com sucesso')
         req.flash('success_msg', 'Cardápio enviado ao Menu com Sucesso!')

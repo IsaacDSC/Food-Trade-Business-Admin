@@ -20,6 +20,10 @@ const Menu = db.sequelize.define('menu', {
     valorVenda: {
         type: db.Sequelize.FLOAT,
         require: true
+    },
+    lucro: {
+        type: db.Sequelize.FLOAT,
+        require: true
     }
 })
 

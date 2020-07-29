@@ -8,6 +8,7 @@ const History = require('../models/HistoryHome_models')
 const Footer = require('../models/Footer_models')
 const Slideshow = require('../models/PagHome_Slideshow')
 const Contato = require('../models/Contato')
+const Menu = require('../models/Menu')
     //adionando models para carregar pagina de cardápios
 const CardapioHome = require('../models/CardapiosHome_models')
 const MenuBurger = require('../models/MenuBurger')
@@ -69,6 +70,14 @@ router.get('/vis-cardapiohome', auth, (req, res) => {
         res.render('vis-admin/vis-cardapiohome', { layout: 'dashboard.handlebars', cardHome: cardHome })
     }).catch((err) => {
         res.send('Error' + err)
+    })
+})
+
+router.get('/cardapios', auth, (req, res) => {
+    Menu.findAll().then((menu) => {
+        res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', menu: menu })
+    }).catch((err) => {
+        res.send(err)
     })
 })
 

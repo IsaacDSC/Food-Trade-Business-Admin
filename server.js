@@ -13,6 +13,10 @@ require('./config/auth')(passport)
 const superUser = require('./routes/superUser')
     //adicionando tela de adm
 const admin = require('./routes/admin')
+    //adionando router visAdmin
+const visualizarAdmin = require('./routes/visualizarAdmin')
+    //adionando router addBd com todas as rotas post para adionar ao  banco de dados
+const addBd = require('./routes/addBd')
 
 //configurando body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -43,6 +47,8 @@ app.use((req, res, next) => {
 
 app.use('/admin', admin)
 app.use('/superuser', superUser)
+app.use('/visAdmin', visualizarAdmin)
+app.use('/addbd', addBd)
 
 const PORT = 3001
 app.listen(PORT, () => {

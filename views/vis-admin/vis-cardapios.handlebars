@@ -1,0 +1,60 @@
+<section id="dashboard">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+            {{>_navEditPages}}
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Visualizar Contato</h2>
+                        </div>
+                        <div class="p-2">
+                            <span class="d-none d-md-block">
+                                <a href="/admin/edit-cardapios" class="btn btn-outline-primary btn-sm">Editar</a>
+                            </span>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ações
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                    <a class="dropdown-item" href="/admin/edit-cardapios">Editar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{>_msg}}
+                    <hr>
+
+
+                    <!-- Start All Pages -->
+                    <div class="all-page-title page-breadcrumb">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h1>Menus</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End All Pages -->
+
+                    <!-- Start Contact -->
+
+                    <div class="contact-box">
+                        <div class="container">
+                            <form action="/contato/contatopost" method="post">
+                                {{#each menu}}
+                                <h4>{{dataValues.class}}</h4>
+                                <h4>{{dataValues.name}}</h4>
+                                <h4>{{dataValues.desc}}</h4>
+                                <h4>{{dataValues.valorGasto}}</h4>
+                                <h4>{{dataValues.valorVenda}}</h4>
+                                <h4>{{dataValues.lucro}}</h4>
+                                <hr>
+                                {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>

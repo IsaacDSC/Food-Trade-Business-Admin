@@ -94,4 +94,13 @@ router.get('/menu', auth, (req, res) => {
             res.render('edit-admin/edit-menuBurger', { layout: 'dashboard.handlebars', burger: burger })
         })
     }) */
+
+
+router.get('/config', auth, (req, res) => {
+    res.render('AdmConfig/config', { layout: 'dashboard.handlebars' })
+})
+
+
+
+
 module.exports = router
