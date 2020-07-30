@@ -257,16 +257,40 @@ router.post('/menu', (req, res) => {
     }).then(() => {
         //res.send('Enviado com sucesso')
         req.flash('success_msg', 'Cardápio enviado ao Menu com Sucesso!')
-        res.redirect('visAdmin/cardapios')
+        res.redirect('/visAdmin/cardapios')
     }).catch((err) => {
         //res.send(err)
         req.flash('error_msg', 'Preencha corretamente o campo e tente enviar novamente!')
-        res.redirect('visAdmin/cardapios')
+        res.redirect('/visAdmin/cardapios')
     })
 })
 
-router.post('/pedido', (req, res) => {
+router.post('/edit-menu', (req, res) => {
+    Menu.findOne({ where: { id: req.body.id } }).then((menu) => {
+        menu.name = req.body.name,
+            menu.desc = req.body.desc,
+            menu.valorGasto = req.body.valorGasto,
+            menu.valorVenda = req.body.valorVenda,
+            menu.lucro = req.body.valorVenda - req.body.valorGasto,
+            menu.save().then(() => {
+                //res.send('editado com sucesso')
+                req.flash('success_msg', 'Formulário editado com suecesso!')
+                res.redirect('/visAdmin/cardapios')
+            }).catch((err) => {
+                res.send(err)
+            })
+    })
+})
 
+router.post('/delete-cardapio', (req, res) => {
+    Menu.findOne({ where: { id: req.body.id } }).then((menu) => {
+        menu.destroy().then(() => {
+            req.flash('success_msg', 'Formulário deletado com sucesso! com suecesso!')
+            res.redirect('/visAdmin/cardapios')
+        }).catch((err) => {
+            res.send(err)
+        })
+    })
 })
 
 module.exports = router

@@ -16,6 +16,7 @@ const Contato = require('../models/Contato')
 //adionando models menus cardápios
 const MenuBurger = require('../models/MenuBurger')
 const menuBebidas = require('../models/MenuBebidas')
+const Menu = require('../models/Menu')
 
 router.get('/', auth, (req, res) => {
     res.render('admin/dashboard', { layout: 'dashboard.handlebars' })
@@ -100,7 +101,16 @@ router.get('/config', auth, (req, res) => {
     res.render('AdmConfig/config', { layout: 'dashboard.handlebars' })
 })
 
+router.get('/edit-cardapios', auth, (req, res) => {
+    res.render('edit-admin/edit-menu', { layout: 'dashboard.handlebars' })
+})
 
+router.post('/edit-cardapio', auth, (req, res) => {
+    //res.send(req.body.id)
+    Menu.findOne({ where: { id: req.body.id } }).then((menu) => {
+        res.render('edit-admin/edit-menu', { layout: 'dashboard.handlebars', menu: menu })
+    })
+})
 
 
 module.exports = router

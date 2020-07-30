@@ -88,7 +88,7 @@ router.get('/cardapios', auth, (req, res) => {
         res.send(err)
     })
 })
-router.post('/cardapios', (req, res) => {
+router.post('/cardapios', auth, (req, res) => {
     if (req.body.class == 'Hamburgue') {
         Menu.findAll({ where: { class: 'Hamburgue' } }).then((Burger) => {
             res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Burger: Burger })
@@ -100,23 +100,23 @@ router.post('/cardapios', (req, res) => {
         })
     }
     if (req.body.class == 'Bebidas') {
-        Menu.findAll({ where: { class: 'Bebidas' } }).then((Burger) => {
-            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Burger: Burger })
+        Menu.findAll({ where: { class: 'Bebidas' } }).then((Bebidas) => {
+            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Bebidas: Bebidas })
         })
     }
     if (req.body.class == 'Sorvete') {
-        Menu.findAll({ where: { class: 'Sorvete' } }).then((Burger) => {
-            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Burger: Burger })
+        Menu.findAll({ where: { class: 'Sorvete' } }).then((Sorvete) => {
+            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Sorvete: Sorvete })
         })
     }
     if (req.body.class == 'Combos') {
-        Menu.findAll({ where: { class: 'Combos' } }).then((Burger) => {
-            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Burger: Burger })
+        Menu.findAll({ where: { class: 'Combos' } }).then((Combos) => {
+            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Combos: Combos })
         })
     }
     if (req.body.class == 'Promocoes') {
-        Menu.findAll({ where: { class: 'Promocoes' } }).then((Burger) => {
-            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Burger: Burger })
+        Menu.findAll({ where: { class: 'Promocoes' } }).then((Promocoes) => {
+            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Promocoes: Promocoes })
         })
     }
 
