@@ -26,12 +26,13 @@ const MenuPizza = require('../models/MenuPizza')
     //models login admin
 const SuperUser = require('../models/SuperUser')
 
-
-
+//rota responsável por facilitar o carregamento de dados para o db e carregar o layout para a aplicações
 router.get('/', auth, (req, res) => {
     res.render('reset/reset', { layout: 'dashboard.handlebars' })
 })
 
+
+//pagina responável por carregar layout da navegação 
 router.get('/headernav', auth, (req, res) => {
     HeaderNav.create({
         logotipo: 'images/logotipo.png',
@@ -61,6 +62,7 @@ router.get('/headernav', auth, (req, res) => {
     })
 })
 
+//rota responsavel por carregar layout slideshow da pagina home 
 router.get('/homeslideshow', auth, (req, res) => {
     PagHome_slideshow.create({
         img1: 'images/slider-01.jpg',
@@ -93,6 +95,7 @@ router.get('/homeslideshow', auth, (req, res) => {
     })
 })
 
+//rota responsável pelo carregamento do layout da parte footer rodapé do site 
 router.get('/footer', auth, (req, res) => {
     Footer_models.create({
         title1: 'SOBRE NÓS',
@@ -139,6 +142,7 @@ router.get('/footer', auth, (req, res) => {
     })
 })
 
+//rota responsavel pelo carregamento do layout da pagina home área litlle history
 router.get('/history', auth, (req, res) => {
         Hystoryhome_models.create({
             title1: 'Bem vindo ao',
@@ -159,6 +163,7 @@ router.get('/history', auth, (req, res) => {
         })
     })
     // falta colocar url 2,3,4!!!!!!!!!!!!!!!!!
+    //rota responsavel por carregar menu da pagina inicial home para ser como um anuncio de propagandas e combos, layout client para poder testar a aplicação
 router.get('/cardapiohome', (req, res) => {
     CardapioHome_models.create({
         title: 'Promoções do Cardápio',
@@ -209,6 +214,7 @@ router.get('/cardapiohome', (req, res) => {
     })
 })
 
+//rota responsavel por carregar menuburger, layout client para poder testar a aplicação
 router.get('/menuburger', auth, (req, res) => {
     MenuBurger.create({
         title: 'BURGUER RESTAURANTE',
@@ -281,6 +287,7 @@ router.get('/menuburger', auth, (req, res) => {
     })
 })
 
+//rota responsavel por carregar menubebidas, layout client para poder testar a aplicação
 router.get('/menubebidas', auth, (req, res) => {
     MenuBebidas.create({
         title: 'BEBIDAS',
@@ -319,6 +326,7 @@ router.get('/menubebidas', auth, (req, res) => {
     })
 })
 
+//rota responsavel por carregar menupizza, layout client para poder testar a aplicação
 router.get('/menupizzas', auth, (req, res) => {
     MenuPizza.create({
         title: 'Best Pizzas',
@@ -353,6 +361,7 @@ router.get('/menupizzas', auth, (req, res) => {
     })
 })
 
+//rota responsavel por adionar layout da pagina de contato do servidor client
 router.get('/contato', auth, (req, res) => {
     Contato.create({
         title: 'Seja Bem Vindo a Pagina de Cotato!',
