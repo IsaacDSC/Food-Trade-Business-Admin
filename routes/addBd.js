@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const { auth } = require('../helpers/Authenticated')
 
 
 //adionando models
@@ -16,7 +17,7 @@ const MenuBurger = require('../models/MenuBurger')
 
 
 
-router.post('/headernav', (req, res) => {
+router.post('/headernav', auth, (req, res) => {
     HeaderNav.findOne({ id: req.body.id }).then((nav) => {
         nav.logotipo = req.body.logotipo,
             nav.nav1 = req.body.nav1,
@@ -48,7 +49,7 @@ router.post('/headernav', (req, res) => {
     })
 })
 
-router.post('/slideshow', (req, res) => {
+router.post('/slideshow', auth, (req, res) => {
     pagHome_slideshow.findOne({ id: req.body.id }).then((slideshow) => {
         //primeira parte do form
         slideshow.img1 = req.body.img1,
@@ -92,7 +93,7 @@ router.post('/slideshow', (req, res) => {
 })
 
 
-router.post('/history', (req, res) => {
+router.post('/history', auth, (req, res) => {
     History.findOne({ id: req.body.id }).then((history) => {
         history.title1 = req.body.title1,
             history.title2 = req.body.title2,
@@ -112,7 +113,7 @@ router.post('/history', (req, res) => {
     })
 })
 
-router.post('/footer', (req, res) => {
+router.post('/footer', auth, (req, res) => {
     Footer.findOne({ id: req.body.id }).then((footer) => {
         footer.title1 = req.body.title1,
             footer.describe1 = req.body.describe1,
@@ -159,7 +160,7 @@ router.post('/footer', (req, res) => {
 })
 
 
-router.post('/contato', (req, res) => {
+router.post('/contato', auth, (req, res) => {
     Contato.findOne({ id: req.body.id }).then((contato) => {
         contato.title = req.body.title,
             contato.subtitle = req.body.subtitle,
@@ -181,7 +182,7 @@ router.post('/contato', (req, res) => {
     })
 })
 
-router.post('/menuBurger', (req, res) => {
+router.post('/menuBurger', auth, (req, res) => {
     MenuBurger.findOne({ id: req.body.id }).then((burger) => {
         burger.title = req.body.title,
             burger.desc = req.body.desc,
@@ -246,7 +247,7 @@ router.post('/menuBurger', (req, res) => {
     })
 })
 
-router.post('/menu', (req, res) => {
+router.post('/menu', auth, (req, res) => {
     Menu.create({
         class: req.body.class,
         name: req.body.name,
@@ -265,7 +266,7 @@ router.post('/menu', (req, res) => {
     })
 })
 
-router.post('/edit-menu', (req, res) => {
+router.post('/edit-menu', auth, (req, res) => {
     Menu.findOne({ where: { id: req.body.id } }).then((menu) => {
         menu.name = req.body.name,
             menu.desc = req.body.desc,
@@ -282,7 +283,7 @@ router.post('/edit-menu', (req, res) => {
     })
 })
 
-router.post('/delete-cardapio', (req, res) => {
+router.post('/delete-cardapio', auth, (req, res) => {
     Menu.findOne({ where: { id: req.body.id } }).then((menu) => {
         menu.destroy().then(() => {
             req.flash('success_msg', 'Formulário deletado com sucesso! com suecesso!')
