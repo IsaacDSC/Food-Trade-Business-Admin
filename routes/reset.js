@@ -17,18 +17,12 @@ const CardapioHome_models = require('../models/CardapiosHome_models')
 const Contato = require('../models/Contato')
 
 const Menu = require('../models/Menu')
-const Usuarios = require('../models/Usuarios')
+
 
 //adionando Models Menu
-const MenuAlmoco = require('../models/MenuAlmoco')
 const MenuBebidas = require('../models/MenuBebidas')
 const MenuBurger = require('../models/MenuBurger')
-const MenuBuger1 = require('../models/MenuBurger1')
-const MenuCombos = require('../models/MenuCombos')
-const MenuDoces = require('../models/MenuDoces')
 const MenuPizza = require('../models/MenuPizza')
-const MenuPromocoes = require('../models/MenuProcoes')
-const MenuSorvetes = require('../models/MenuSorvetes')
     //models login admin
 const SuperUser = require('../models/SuperUser')
 
@@ -376,6 +370,7 @@ router.get('/contato', auth, (req, res) => {
     })
 })
 
+//rota responsavel por cadastrar SuperUser Admin do siste 
 router.get('/SuperUser', (req, res) => {
     const senha = 'Iagent*123'
     bcryptjs.genSalt(10, (err, salt) => {
@@ -398,6 +393,7 @@ router.get('/SuperUser', (req, res) => {
     })
 })
 
+//rota responsável por cadastrar client teste aplication
 router.get('/userClients', (req, res) => {
     const senha = '123456'
     bcryptjs.genSalt(10, (err, salt) => {

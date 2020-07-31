@@ -17,6 +17,10 @@ const admin = require('./routes/admin')
 const visualizarAdmin = require('./routes/visualizarAdmin')
     //adionando router addBd com todas as rotas post para adionar ao  banco de dados
 const addBd = require('./routes/addBd')
+    //rota responsável por carregar e subir imagems para o servidor carregas na paginas client
+const uploafiles = require('./routes/uploadFiles')
+    //adionando rota responsável por resetar a pagina dinamicamente do servidor da aplicação client
+const reset = require('./routes/reset')
 
 //configurando body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -49,6 +53,8 @@ app.use('/admin', admin)
 app.use('/superuser', superUser)
 app.use('/visAdmin', visualizarAdmin)
 app.use('/addbd', addBd)
+app.use('/uploadfiles', uploafiles)
+app.use('/reset', reset)
 
 const PORT = 3001
 app.listen(PORT, () => {
