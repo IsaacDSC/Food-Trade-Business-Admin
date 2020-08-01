@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { auth } = require('../helpers/Authenticated')
+    //configuração para enviar email caso haja erro
 const email = require('../config/email')
     //adionando models com info sobre errors para envio futuro de email
 const Erros = require('../models/Erros')
@@ -47,12 +48,11 @@ router.post('/headernav', auth, (req, res) => {
             res.redirect('/visAdmin/vis-headernav')
         }).cath((err) => {
             Erros.create({
-                name: 'erro ao enviar layout ao db',
-                desc: 'Erro ao enviar layout headernav para o banco de dados',
+                name: 'Erro ao enviar layout headernav para o banco de dados',
+                desc: err,
                 code: 'EEN-1001'
             }).then(() => {
                 email.pesquisar()
-                email.enviarEmail()
             })
             req.flash('error_msg', ' error: EEN-1001')
             res.send('Erro ao Editar:  ' + err)
