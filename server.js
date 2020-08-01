@@ -8,6 +8,8 @@ const flash = require('connect-flash')
 const passport = require('passport')
 require('./config/auth')(passport)
 
+//rota para test envio de email
+const routerTest = require('./test/routerTest')
 
 //adionando login Administrador Site
 const superUser = require('./routes/superUser')
@@ -21,6 +23,7 @@ const addBd = require('./routes/addBd')
 const uploafiles = require('./routes/uploadFiles')
     //adionando rota responsável por resetar a pagina dinamicamente do servidor da aplicação client
 const reset = require('./routes/reset')
+const router = require('./routes/addBd')
 
 //configurando body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -55,6 +58,8 @@ app.use('/visAdmin', visualizarAdmin)
 app.use('/addbd', addBd)
 app.use('/uploadfiles', uploafiles)
 app.use('/reset', reset)
+
+app.use('/test', routerTest)
 
 const PORT = 3001
 app.listen(PORT, () => {

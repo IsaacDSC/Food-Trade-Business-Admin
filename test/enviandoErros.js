@@ -10,7 +10,6 @@ Errors.create({
     desc: desc,
     code: code
 }).then(() => {
-    console.log(email.enviarEmail())
     console.log('Erros enviado com sucesso ao banco de dados')
 }).catch((err) => {
     console.log(err)

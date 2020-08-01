@@ -1,7 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const { auth } = require('../helpers/Authenticated')
-
+const email = require('../config/email')
+    //adionando models com info sobre errors para envio futuro de email
+const Erros = require('../models/Erros')
 
 //adionando models
 const HeaderNav = require('../models/HeaderNav')
@@ -13,6 +15,7 @@ const Menu = require('../models/Menu')
     //adionando models menu
 const CardapioHome = require('../models/CardapiosHome_models')
 const MenuBurger = require('../models/MenuBurger')
+
 
 
 
@@ -43,6 +46,14 @@ router.post('/headernav', auth, (req, res) => {
             req.flash('success_msg', 'Pagina Editada com Sucesso!')
             res.redirect('/visAdmin/vis-headernav')
         }).cath((err) => {
+            Erros.create({
+                name: 'erro ao enviar layout ao db',
+                desc: 'Erro ao enviar layout headernav para o banco de dados',
+                code: 'EEN-1001'
+            }).then(() => {
+                email.pesquisar()
+                email.enviarEmail()
+            })
             req.flash('error_msg', ' error: EEN-1001')
             res.send('Erro ao Editar:  ' + err)
         })
