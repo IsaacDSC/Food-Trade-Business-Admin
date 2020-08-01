@@ -8,7 +8,8 @@ const sequelize = new Sequelize('ftb', 'dev', 'secret123', {
 sequelize.authenticate().then(function() {
     console.log('Conectado com Sucesso')
 }).catch(function(erro) {
-    console.log('Erro ao se conectar' + erro )
+    //chamar função e enviar error para email
+    console.log('Erro ao se conectar' + erro)
 })
 
 module.exports = {

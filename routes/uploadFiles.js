@@ -12,6 +12,7 @@ const unlink = promisify(fs.unlink);
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
         cb(null, folder)
+        console.log(file)
     },
     filename: function(req, file, cb) {
         //function para contar arquivos
@@ -22,7 +23,16 @@ const storage = multer.diskStorage({
     }
 })
 
-const upload = multer({ storage })
+const upload = multer({
+    storage,
+    fileFilter: (req, res, cb) => {
+        if (file.mimetype == "image/jpg") {
+            cb(null, true)
+        } else {
+            cb(null, false)
+        }
+    }
+})
 
 
 
