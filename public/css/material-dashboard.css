@@ -74,6 +74,7 @@ hr {
     overflow: visible;
 }
 
+/* consigo alterar bckgrd do títula da pag e onde está form */
 h1,
 h2,
 h3,
@@ -84,9 +85,11 @@ h6 {
     margin-bottom: 0.5rem;
 }
 
+/* onde está o tds os campos são obrigatórios */
 p {
     margin-top: 0;
     margin-bottom: 1rem;
+    color: #999;
 }
 
 abbr[title],
@@ -2217,6 +2220,7 @@ select.form-control:focus::-ms-value {
     padding-bottom: calc(0.25rem + 1px);
     font-size: 0.875rem;
     line-height: 1.5;
+
 }
 
 .form-control-plaintext {
