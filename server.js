@@ -25,7 +25,7 @@ const uploafiles = require('./routes/uploadFiles')
 const reset = require('./routes/reset')
     //route responsável por fazer montar pedido no dashboard
 const montarPedido = require('./routes/montarPedido')
-const router = require('./test/routerTest')
+const routes = require('./test/routerTest')
 
 
 //configurando body-parser
