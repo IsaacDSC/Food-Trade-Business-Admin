@@ -30,92 +30,82 @@
         <!-- horizontal form -->
         <!-- ============================================================== -->
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <form action="/aperitivos/cadastrar" method="post">
                 <div class="card">
                     <h5 class="card-header">Cadastro do Produto Aperitivo</h5>
                     <div class="card-body">
-                        <form id="form" data-parsley-validate="" novalidate="">
-                            <div class="form-group">
-                                <label for="nomeAperitivo">Nome do Aperitivo</label>
-                                <input type="text" name="nomeAperitivo" id="nomeAperitivo" class="form-control"
-                                    placeholder="Digite o nome do Aperitivo">
+                        <section id="home">
+                        <!-- Start slides -->
+                        <div id="slides" class="cover-slides">
+                            <ul class="slides-container">
+                                <li class="text-center">
+                                    <!-- HEAD -->
+                                    <img src="/images/slider-01.jpg" alt="">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h1 class="m-b-20"><strong>{{slideshow.dataValues.title1_1}} <br>
+                                                        {{slideshow.dataValues.title1_2}}</strong></h1>
+                                                <p class="m-b-40">{{slideshow.dataValues.text1_1}} <br>
+                                                    {{slideshow.dataValues.text1_2}}</p>
+                                                <p><a class="btn btn-lg btn-circle btn-outline-new-white"
+                                                        href="{{slideshow.dataValues.urlbtn1}}">{{slideshow.dataValues.btn1}}</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="text-center">
+                                    <!-- HEAD -->
+                                    <img src="/images/slider-02.jpg" alt="">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h1 class="m-b-20"><strong>{{slideshow.dataValues.title2_1}}<br>
+                                                        {{slideshow.dataValues.title2_2}} </strong></h1>
+                                                <p class="m-b-40">{{slideshow.dataValues.text2_1}} <br>
+                                                    {{slideshow.dataValues.text2_2}}</p>
+                                                <p><a class="btn btn-lg btn-circle btn-outline-new-white"
+                                                        href="{{slideshow.dataValues.urlbtn2}}">{{slideshow.dataValues.btn2}}</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="text-center">
+                                    <!--- HEAD -->
+                                    <img src="/images/slider-03.jpg" alt="">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h1 class="m-b-20"><strong>{{slideshow.dataValues.title3_1}}<br>
+                                                        {{slideshow.dataValues.title3_2}}</strong></h1>
+                                                <p class="m-b-40">{{slideshow.dataValues.text3_1}} <br>
+                                                    {{slideshow.dataValues.text3_2}}</p>
+                                                <p><a class="btn btn-lg btn-circle btn-outline-new-white"
+                                                        href="{{slideshow.dataValues.urlbtn3}}">{{slideshow.dataValues.btn3}}</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="slides-navigation">
+                                <a href="#" class="next"><i class="{{slideshow.dataValues.iconbtnNext}}"></i></a>
+                                <a href="#" class="prev"><i class="{{slideshow.dataValues.iconbtnPrev}}"
+                                        aria-hidden="true"></i></a>
                             </div>
-                            <div class="form-group">
-                                <label for="descAperitivo">Descrição do Aperitivo</label>
-                                <textarea name="descAperitivo" id="descAperitivo" cols="30" rows="10"
-                                    class="form-control" placeholder="Digite a descrição deste aperitivo"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="valorAperitivo">Valor Aperitivo</label>
-                                <input type="text" name="valorAperitivo" id="valorAperitivo" class="form-control"
-                                    placeholder="Digite o valor do Aperitivo">
-                            </div>
-                            <div class="form-group">
-                                <label for="gastoAperitivo">Valor Gasto Aperitivo</label>
-                                <input type="text" name="gastoAperitivo" id="gastoAperitivo" class="form-control"
-                                    placeholder="Digite o valor gasto do Aperitivo">
-                            </div>
-                            <hr>
-                            <div class="row pt-2 pt-sm-5 mt-1">
-                                <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                    <label class="be-checkbox custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"><span
-                                            class="custom-control-label">Remember me</span>
-                                    </label>
-                                </div>
-                                <div class="col-sm-6 pl-0">
-                                    <p class="text-right">
-                                        <button type="submit" class="btn btn-space btn-primary">Submit</button>
-                                        <button class="btn btn-space btn-secondary">Cancel</button>
-                                    </p>
-                                </div>
-                            </div>
-                        </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
                     </div>
                 </div>
         </div>
         <!-- ============================================================== -->
         <!-- end horizontal form -->
         <!-- ============================================================== -->
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <form action="/aperitivos/cadastrar_opc" method="post">
-                <div class="card">
-                    <h5 class="card-header">Opções Aperitivos</h5>
-                    <div class="card-body">
-                        <form id="form" data-parsley-validate="" novalidate="">
-                            <div class="form-group">
-                                <label for="nome">Nome da opção Aperitivo</label>
-                                <input type="text" name="nome" id="nome" class="form-control"
-                                    placeholder="Digite o nome da opção do Aperitivo">
-                            </div>
-                            <div class="form-group">
-                                <label for="valor">Valor da Opção Aperitivo</label>
-                                <input type="text" name="valor" id="valor" class="form-control"
-                                    placeholder="Digite o valor da opção do Aperitivo">
-                            </div>
-                            <div class="form-group">
-                                <label for="gasto">Valor da Opção Gasto Aperitivo</label>
-                                <input type="text" name="gasto" id="gasto" class="form-control"
-                                    placeholder="Digite o valor gasto da opção do Aperitivo">
-                            </div>
-                            <hr>
-                            <div class="row pt-2 pt-sm-5 mt-1">
-                                <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                    <label class="be-checkbox custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"><span
-                                            class="custom-control-label">Remember me</span>
-                                    </label>
-                                </div>
-                                <div class="col-sm-6 pl-0">
-                                    <p class="text-right">
-                                        <button type="submit" class="btn btn-space btn-primary">Submit</button>
-                                        <button class="btn btn-space btn-secondary">Cancel</button>
-                                    </p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-        </div>
+        
     </div>
 </div>

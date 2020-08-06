@@ -29,93 +29,61 @@
         <!-- ============================================================== -->
         <!-- horizontal form -->
         <!-- ============================================================== -->
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <form action="/aperitivos/cadastrar" method="post">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">            
                 <div class="card">
-                    <h5 class="card-header">Cadastro do Produto Aperitivo</h5>
+                    <h5 class="card-header">Visualizar Imagens Carregadas</h5>
                     <div class="card-body">
-                        <form id="form" data-parsley-validate="" novalidate="">
-                            <div class="form-group">
-                                <label for="nomeAperitivo">Nome do Aperitivo</label>
-                                <input type="text" name="nomeAperitivo" id="nomeAperitivo" class="form-control"
-                                    placeholder="Digite o nome do Aperitivo">
-                            </div>
-                            <div class="form-group">
-                                <label for="descAperitivo">Descrição do Aperitivo</label>
-                                <textarea name="descAperitivo" id="descAperitivo" cols="30" rows="10"
-                                    class="form-control" placeholder="Digite a descrição deste aperitivo"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="valorAperitivo">Valor Aperitivo</label>
-                                <input type="text" name="valorAperitivo" id="valorAperitivo" class="form-control"
-                                    placeholder="Digite o valor do Aperitivo">
-                            </div>
-                            <div class="form-group">
-                                <label for="gastoAperitivo">Valor Gasto Aperitivo</label>
-                                <input type="text" name="gastoAperitivo" id="gastoAperitivo" class="form-control"
-                                    placeholder="Digite o valor gasto do Aperitivo">
-                            </div>
-                            <hr>
-                            <div class="row pt-2 pt-sm-5 mt-1">
-                                <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                    <label class="be-checkbox custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"><span
-                                            class="custom-control-label">Remember me</span>
-                                    </label>
-                                </div>
-                                <div class="col-sm-6 pl-0">
-                                    <p class="text-right">
-                                        <button type="submit" class="btn btn-space btn-primary">Submit</button>
-                                        <button class="btn btn-space btn-secondary">Cancel</button>
-                                    </p>
+                        <form action="/uploadfiles/files" method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label><span class="text-danger">* </span>Imagem já carregadas</label>
+                                <div class="custom-file">
+                                    <select name="file" id="file" class="form-control">
+                                        {{#each paths}}
+                                        <option value="{{this}}">{{this}} </option>
+                                        {{/each}}
+                                    </select>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+                        <button class="btn btn-outline-info col-12">Carregar</button>
+                    </form>
+                    <hr class="mt-5">
+                    <h4>Carregamento das Imagens</h4>
+                    <form action="/uploadfiles/upload" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label><span class="text-danger">* </span>Carregue a Imagem</label>
+                                <div class="custom-file">
+                                    <input type="file" name="img" class="form-control" id="customFile" border="1">
+                                    <label class="form-control" for="customFile">Carregar Arquivo</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-success col-12">Enviar</button>
+                    </form>
+                    <hr class="mt-5">
+                    <h4>Deletar Imagens Carregadas</h4>
+                    <form action="/uploadfiles/delete" method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label><span class="text-danger">* </span>Imagem já carregadas</label>
+                                <div class="custom-file">
+                                    <select name="file" id="file" class="form-control">
+                                        {{#each paths}}
+                                        <option value="{{this}}">{{this}} </option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-danger col-12">Deletar</button>
+                    </form>
                     </div>
                 </div>
         </div>
         <!-- ============================================================== -->
         <!-- end horizontal form -->
-        <!-- ============================================================== -->
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <form action="/aperitivos/cadastrar_opc" method="post">
-                <div class="card">
-                    <h5 class="card-header">Opções Aperitivos</h5>
-                    <div class="card-body">
-                        <form id="form" data-parsley-validate="" novalidate="">
-                            <div class="form-group">
-                                <label for="nome">Nome da opção Aperitivo</label>
-                                <input type="text" name="nome" id="nome" class="form-control"
-                                    placeholder="Digite o nome da opção do Aperitivo">
-                            </div>
-                            <div class="form-group">
-                                <label for="valor">Valor da Opção Aperitivo</label>
-                                <input type="text" name="valor" id="valor" class="form-control"
-                                    placeholder="Digite o valor da opção do Aperitivo">
-                            </div>
-                            <div class="form-group">
-                                <label for="gasto">Valor da Opção Gasto Aperitivo</label>
-                                <input type="text" name="gasto" id="gasto" class="form-control"
-                                    placeholder="Digite o valor gasto da opção do Aperitivo">
-                            </div>
-                            <hr>
-                            <div class="row pt-2 pt-sm-5 mt-1">
-                                <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                    <label class="be-checkbox custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"><span
-                                            class="custom-control-label">Remember me</span>
-                                    </label>
-                                </div>
-                                <div class="col-sm-6 pl-0">
-                                    <p class="text-right">
-                                        <button type="submit" class="btn btn-space btn-primary">Submit</button>
-                                        <button class="btn btn-space btn-secondary">Cancel</button>
-                                    </p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-        </div>
+        <!-- ============================================================== -->        
     </div>
 </div>
