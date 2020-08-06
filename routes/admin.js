@@ -87,7 +87,7 @@ router.get('/edit-menuBebidas', (req, res) => {
     })
 })
 
-router.get('/menu', auth, (req, res) => {
+router.get('/menu', (req, res) => {
         res.render('addbd/addMenu')
     })
     /* router.get('/edit-menuBurger', (req, res) => {
