@@ -15,7 +15,7 @@ const MenuBurger = require('../models/MenuBurger')
 
 router.get('/vis-headernav', (req, res) => {
     HeaderNav.findOne().then((nav) => {
-        res.render('vis-admin/vis-headerNav', { layout: 'dashboard.handlebars', nav: nav })
+        res.render('vis-admin/vis-headerNav')
     }).catch((err) => {
         res.send('Error ao Carregar models header nav na rota vis-headernav ' + err)
     })
@@ -23,7 +23,7 @@ router.get('/vis-headernav', (req, res) => {
 
 router.get('/vis-history', (req, res) => {
     History.findOne().then((hisHome) => {
-        res.render('vis-admin/vis-history', { layout: 'dashboard.handlebars', hisHome: hisHome })
+        res.render('vis-admin/vis-history')
     }).catch((err) => {
         res.send('Error ao Carregar models header history na rota vis-history' + err)
     })
@@ -31,7 +31,7 @@ router.get('/vis-history', (req, res) => {
 
 router.get('/vis-footer', (req, res) => {
     Footer.findOne().then((footer) => {
-        res.render('vis-admin/vis-footer', { layout: 'dashboard.handlebars', footer: footer })
+        res.render('vis-admin/vis-footer')
     }).catch((err) => {
         //Erro ao carregar pagina Visualizar Footer do banco de dados
         req.flash('error_msg', 'EVFDB-1001')
@@ -41,7 +41,7 @@ router.get('/vis-footer', (req, res) => {
 
 router.get('/vis-slideshow', (req, res) => {
     Slideshow.findOne().then((slideshow) => {
-        res.render('vis-admin/vis-slideshow', { layout: 'dashboard.handlebars', slideshow: slideshow })
+        res.render('vis-admin/vis-slideshow')
     }).catch((err) => {
         //Erro ao carregar pagina Visualizar Slideshow do banco de dados
         req.flash('error_msg', 'EVSDB-1010')
@@ -51,7 +51,7 @@ router.get('/vis-slideshow', (req, res) => {
 
 router.get('/vis-contato', (req, res) => {
     Contato.findOne().then((contato) => {
-        res.render('vis-admin/vis-contato', { layout: 'dashboard.handlebars', contato: contato })
+        res.render('vis-admin/vis-contato')
     }).catch((err) => {
         res.send('Error' + err)
     })
@@ -59,7 +59,7 @@ router.get('/vis-contato', (req, res) => {
 
 router.get('/vis-menuBurger', (req, res) => {
     MenuBurger.findOne().then((burger) => {
-        res.render('vis-admin/vis-menuBurger', { layout: 'dashboard.handlebars', burger: burger })
+        res.render('vis-admin/vis-menuBurger')
     }).catch((err) => {
         res.send('error : ' + err)
     })
@@ -67,7 +67,7 @@ router.get('/vis-menuBurger', (req, res) => {
 
 router.get('/vis-cardapiohome', (req, res) => {
     CardapioHome.findOne().then((cardHome) => {
-        res.render('vis-admin/vis-cardapiohome', { layout: 'dashboard.handlebars', cardHome: cardHome })
+        res.render('vis-admin/vis-cardapiohome')
     }).catch((err) => {
         res.send('Error' + err)
     })
@@ -79,7 +79,7 @@ router.get('/cardapios', (req, res) => {
             if (Burger == null || Burger == undefined) {
                 res.send('Table Burger null or undefined')
             } else {
-                res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars' })
+                res.render('vis-admin/vis-cardapios')
             }
         }).catch((err) => {
             res.send(err)
@@ -91,32 +91,32 @@ router.get('/cardapios', (req, res) => {
 router.post('/cardapios', (req, res) => {
     if (req.body.class == 'Hamburgue') {
         Menu.findAll({ where: { class: 'Hamburgue' } }).then((Burger) => {
-            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Burger: Burger })
+            res.render('vis-admin/vis-cardapios')
         })
     }
     if (req.body.class == 'Pizza') {
         Menu.findAll({ where: { class: 'Pizza' } }).then((Pizza) => {
-            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Pizza: Pizza })
+            res.render('vis-admin/vis-cardapios')
         })
     }
     if (req.body.class == 'Bebidas') {
         Menu.findAll({ where: { class: 'Bebidas' } }).then((Bebidas) => {
-            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Bebidas: Bebidas })
+            res.render('vis-admin/vis-cardapios')
         })
     }
     if (req.body.class == 'Sorvete') {
         Menu.findAll({ where: { class: 'Sorvete' } }).then((Sorvete) => {
-            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Sorvete: Sorvete })
+            res.render('vis-admin/vis-cardapios')
         })
     }
     if (req.body.class == 'Combos') {
         Menu.findAll({ where: { class: 'Combos' } }).then((Combos) => {
-            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Combos: Combos })
+            res.render('vis-admin/vis-cardapios')
         })
     }
     if (req.body.class == 'Promocoes') {
         Menu.findAll({ where: { class: 'Promocoes' } }).then((Promocoes) => {
-            res.render('vis-admin/vis-cardapios', { layout: 'dashboard.handlebars', Promocoes: Promocoes })
+            res.render('vis-admin/vis-cardapios')
         })
     }
 

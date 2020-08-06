@@ -31,7 +31,7 @@ const SuperUser = require('../models/SuperUser')
 
 //rota responsável por facilitar o carregamento de dados para o db e carregar o layout para a aplicações
 router.get('/', (req, res) => {
-    res.render('reset/reset', { layout: 'dashboard.handlebars' })
+    res.render('reset/reset')
 })
 
 

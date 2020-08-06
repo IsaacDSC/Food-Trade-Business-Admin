@@ -38,7 +38,7 @@ const upload = multer({
 
 router.get('/', (req, res) => {
     fs.readdir(folder, (err, paths) => {
-        res.render('paths_files/upLoadFile', { layout: 'dashboard.handlebars', paths: paths, folder: folder })
+        res.render('paths_files/upLoadFile')
     })
 })
 
@@ -49,7 +49,7 @@ router.post('/upload', upload.single('img'), (req, res) => {
 
 router.post('/files', (req, res) => {
     fs.readdir(folder, (err, paths) => {
-        res.render('paths_files/viz-file', { layout: 'dashboard.handlebars', file: file, folder: folder })
+        res.render('paths_files/viz-file')
             //res.send(`<img src="/images/${file}" class="img-fluid" alt="imgs">`)
     })
 })
