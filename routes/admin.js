@@ -19,7 +19,7 @@ const menuBebidas = require('../models/MenuBebidas')
 const Menu = require('../models/Menu')
 
 router.get('/', auth, (req, res) => {
-    res.render('admin/dashboard', { layout: 'dashboard.handlebars' })
+    res.render('admin/dashboard')
 })
 
 router.get('/edit-pages', auth, (req, res) => {

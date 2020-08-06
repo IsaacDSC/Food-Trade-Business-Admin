@@ -10,8 +10,8 @@ require('./config/auth')(passport)
 
 //rota para test envio de email
 const routerTest = require('./test/routerTest')
-
-//adionando login Administrador Site
+const routes = require('./routes/routes')
+    //adionando login Administrador Site
 const superUser = require('./routes/superUser')
     //adicionando tela de adm
 const admin = require('./routes/admin')
@@ -25,6 +25,7 @@ const uploafiles = require('./routes/uploadFiles')
 const reset = require('./routes/reset')
     //route responsável por fazer montar pedido no dashboard
 const montarPedido = require('./routes/montarPedido')
+const router = require('./test/routerTest')
 
 
 //configurando body-parser
@@ -63,6 +64,7 @@ app.use('/reset', reset)
 app.use('/montarPedido', montarPedido)
 
 app.use('/test', routerTest)
+app.use(routes)
 
 const PORT = 3001
 app.listen(PORT, () => {
