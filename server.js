@@ -23,7 +23,9 @@ const addBd = require('./routes/addBd')
 const uploafiles = require('./routes/uploadFiles')
     //adionando rota responsável por resetar a pagina dinamicamente do servidor da aplicação client
 const reset = require('./routes/reset')
-const router = require('./routes/addBd')
+    //route responsável por fazer montar pedido no dashboard
+const montarPedido = require('./routes/montarPedido')
+
 
 //configurando body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -58,6 +60,7 @@ app.use('/visAdmin', visualizarAdmin)
 app.use('/addbd', addBd)
 app.use('/uploadfiles', uploafiles)
 app.use('/reset', reset)
+app.use('/montarPedido', montarPedido)
 
 app.use('/test', routerTest)
 

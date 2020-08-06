@@ -17,14 +17,15 @@
   <!-- CSS Files -->
   <link href="/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="/demo/demo.css" rel="stylesheet" />
+  {{!-- <link href="/demo/demo.css" rel="stylesheet" /> --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/brands.min.css">
-
+  <link rel="stylesheet" href="/css/style.Modal.css">
 </head>
 
 <body>
 
   {{{body}}}
+
 
   <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
@@ -214,9 +215,9 @@
   <!-- adionando CDN Fonte-awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/brands.min.js"></script>
     <!-- adionando CDN JQuery -->
-    <script src="/js/code.jquery.com/jquery-1.11.1.min.js"></script>
+    {{!-- <script src="/js/code.jquery.com/jquery-1.11.1.min.js"></script>
    <!-- Todos os arquivos JS -->
-	<script src="/js/jquery-3.2.1.min.js"></script>
+{{!-- 	<script src="/js/jquery-3.2.1.min.js"></script> --}}
   <!-- Todos os Plugins -->
   <script src="/js/jquery.superslides.min.js"></script>
   <script src="/js/chat.js"></script>
@@ -229,7 +230,7 @@
 
   <script src="/js/custom.js"></script>
   <!-- COMMON SCRIPTS -->
-  <script src="/js/jquery-2.2.4.min.js"></script>
+{{!--   <script src="/js/jquery-2.2.4.min.js"></script> --}}
   <!-- <script src="/js/common_scripts_min.js"></script> -->
   <script src="/js/functions.js"></script>
   <script src="/js/validate.js"></script>
@@ -246,7 +247,7 @@
   <script src="/js/theia-sticky-sidebar.min.js"></script>
   <!-- fim -->
   <script src="/js/popper.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script> --}}
 
   <script>
     jQuery('#sidebar').theiaStickySidebar({
@@ -270,6 +271,11 @@
     });
   </script>
   <!-- Fim do js pagina Main -->
+
+
+
+  
+  <script src="/js/modalHome.js"></script>
 </body>
 
 </html>
