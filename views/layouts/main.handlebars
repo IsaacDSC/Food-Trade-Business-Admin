@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,16 +17,19 @@
     <link rel="stylesheet" href="/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <title>Dashboard</title>
 </head>
+
 <body>
-    
 
 
-            {{{body}}}
+<div class="dashboard-main-wrapper">
+    {{>_navDashboard}}
+    <!-- Fim nav partials -->
+    {{>_sidebarDashboard}}
+    {{{body}}}
+</div>
 
-
-
-        <!-- Optional JavaScript -->
- <!-- jquery 3.3.1 -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
     <script src="/vendor/jquery/jquery-3.3.1.min.js"></script>
     <!-- bootstap bundle js -->
     <script src="/vendor/bootstrap/js/bootstrap.bundle.js"></script>
@@ -44,6 +48,7 @@
     <script src="/vendor/charts/c3charts/c3.min.js"></script>
     <script src="/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="/libs/js/dashboard-ecommerce.js"></script> 
+    <script src="/libs/js/dashboard-ecommerce.js"></script>
 </body>
+
 </html>
