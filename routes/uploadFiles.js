@@ -36,7 +36,7 @@ const upload = multer({
 
 
 
-router.get('/', auth, (req, res) => {
+router.get('/', (req, res) => {
     fs.readdir(folder, (err, paths) => {
         res.render('paths_files/upLoadFile', { layout: 'dashboard.handlebars', paths: paths, folder: folder })
     })
