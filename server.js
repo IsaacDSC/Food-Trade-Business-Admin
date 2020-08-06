@@ -62,7 +62,6 @@ app.use('/addbd', addBd)
 app.use('/uploadfiles', uploafiles)
 app.use('/reset', reset)
 app.use('/montarPedido', montarPedido)
-
 app.use('/test', routerTest)
 app.use(routes)
 
