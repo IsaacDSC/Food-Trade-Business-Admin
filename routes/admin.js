@@ -23,23 +23,23 @@ router.get('/', (req, res) => {
 })
 
 router.get('/edit-pages', (req, res) => {
-    res.render('edit-admin/edit-pages', { layout: 'dashboard.handlebars' })
+    res.render('edit-admin/edit-pages')
 })
 
 router.get('/edit-cardapio', (req, res) => {
-    res.render('edit-admin/edit-cardapios', { layout: 'dashboard.handlebars' })
+    res.render('edit-admin/edit-cardapios')
 })
 
 router.get('/edit-nav', (req, res) => {
     HeaderNav.findOne().then((nav) => {
-        res.render('edit-admin/edit-nav', { layout: 'dashboard.handlebars', nav: nav })
+        res.render('edit-admin/edit-nav')
     })
 })
 
 router.get('/edit-home', auth, (req, res) => {
     PagHome_slideshow.findOne().then((slideshow) => {
         fs.readdir(folder, (err, paths) => {
-            res.render('edit-admin/edit-home', { layout: 'dashboard.handlebars', slideshow: slideshow, paths: paths })
+            res.render('edit-admin/edit-home')
         })
     }).catch((err) => {
         res.send('Error: ' + err)
@@ -49,7 +49,7 @@ router.get('/edit-home', auth, (req, res) => {
 router.get('/edit-history', (req, res) => {
     HistoryHome.findOne().then((history) => {
         fs.readdir(folder, (err, paths) => {
-            res.render('edit-admin/edit-history', { layout: 'dashboard.handlebars', hisHome: history, paths: paths })
+            res.render('edit-admin/edit-history')
         })
     }).catch((err) => {
         res.send('Error: ' + err)
@@ -58,7 +58,7 @@ router.get('/edit-history', (req, res) => {
 
 router.get('/edit-cardapiohome', (req, res) => {
     CardapioHome.findOne().then((cardHome) => {
-        res.render('edit-admin/edit-cardapioHome', { layout: 'dashboard.handlebars', cardHome: cardHome })
+        res.render('edit-admin/edit-cardapioHome')
     }).catch((err) => {
         res.send('Error:  ' + err)
     })
@@ -66,7 +66,7 @@ router.get('/edit-cardapiohome', (req, res) => {
 
 router.get('/edit-footer', (req, res) => {
     Footer.findOne().then((footer) => {
-        res.render('edit-admin/edit-footer', { layout: 'dashboard.handlebars', footer: footer })
+        res.render('edit-admin/edit-footer')
     }).catch((err) => {
         res.send('Erro ao carregar models footer: ' + err)
     })
@@ -74,7 +74,7 @@ router.get('/edit-footer', (req, res) => {
 
 router.get('/edit-contato', (req, res) => {
     Contato.findOne().then((contato) => {
-        res.render('edit-admin/edit-contato', { layout: 'dashboard.handlebars', contato: contato })
+        res.render('edit-admin/edit-contato')
     }).catch((err) => {
         res.send('Erro ao carregar a pagina edit-contato' + err)
     })
@@ -83,12 +83,12 @@ router.get('/edit-contato', (req, res) => {
 
 router.get('/edit-menuBebidas', (req, res) => {
     menuBebidas.findOne().then((bebidas) => {
-        res.render('edit-admin/menuBebidas', { layout: 'dashboard.handlebars', bebidas: bebidas })
+        res.render('edit-admin/menuBebidas')
     })
 })
 
 router.get('/menu', auth, (req, res) => {
-        res.render('addbd/addMenu', { layout: 'dashboard.handlebars' })
+        res.render('addbd/addMenu')
     })
     /* router.get('/edit-menuBurger', (req, res) => {
         MenuBurger.findOne().then((burger) => {
@@ -98,17 +98,17 @@ router.get('/menu', auth, (req, res) => {
 
 
 router.get('/config', (req, res) => {
-    res.render('AdmConfig/config', { layout: 'dashboard.handlebars' })
+    res.render('AdmConfig/config')
 })
 
 router.get('/edit-cardapios', (req, res) => {
-    res.render('edit-admin/edit-menu', { layout: 'dashboard.handlebars' })
+    res.render('edit-admin/edit-menu')
 })
 
 router.post('/edit-cardapio', (req, res) => {
     //res.send(req.body.id)
     Menu.findOne({ where: { id: req.body.id } }).then((menu) => {
-        res.render('edit-admin/edit-menu', { layout: 'dashboard.handlebars', menu: menu })
+        res.render('edit-admin/edit-menu')
     })
 })
 
