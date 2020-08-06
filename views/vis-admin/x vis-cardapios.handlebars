@@ -1,0 +1,200 @@
+<section id="dashboard">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">            
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Visualizar Cardápios</h2>
+                        </div>
+                        <div class="p-2">
+                            <span class="d-none d-md-block">
+                                <a href="/admin/menu" class="btn btn-outline-primary btn-sm">Cadastrar Cardápio</a>
+                            </span>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ações
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                    <a class="dropdown-item" href="/admin/menu">Cadastrar Cardápio</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{>_msg}}
+                    <hr>
+
+
+                    <!-- Start All Pages -->
+                    <div class="all-page-title page-breadcrumb">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h1>Menus</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End All Pages -->
+
+                    <!-- Start Contact -->
+
+                    <div class="contact-box">
+                        <div class="container">
+                            <form action="/visAdmin/cardapios" method="post">
+                                <div class="row">
+                                    <div class="form-group col-8">
+                                        <label for="class" class="text-center">selecione a classe de menu que deseja
+                                            Visualizar</label>
+                                        <br>
+                                        <select name="class" id="class" class="form-control">
+                                            <option value="Hamburgue">Hamburguer</option>
+                                            <option value="Pizza">Pizza</option>
+                                            <option value="Bebidas">Bebidas</option>
+                                            <option value="Doces">Doces</option>
+                                            <option value="combos">combos</option>
+                                            <option value="Promoces">Promoções</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-4">
+                                        <button class="btn btn-outline-success" style="width: 100%;">Procurar</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            {{#if Burger}}
+                            <h2>Menu Burger</h2>
+                            {{#each Burger}}
+                            <form action="/admin/edit-cardapio" method="post">
+                                <input type="hidden" name="id" value="{{dataValues.id}}">
+                                <h4><strong>Nome: </strong><small>{{dataValues.name}}</small></h4>
+                                <h4><strong>Descrição: </strong><small>{{dataValues.desc}}</small></h4>
+                                <h4><strong>Valor Gasto de Material: </strong> <small>R$
+                                        {{dataValues.valorGasto}}</small>
+                                </h4>
+                                <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
+                                <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
+                                <div class="row">
+                                    <div class="form-group col-12">
+                                        <button type="submit" class="btn btn-outline-success">Editar</button>
+                            </form>
+                            <form action="/addbd/delete-cardapio" method="post">
+                                <input type="hidden" name="id" value="{{dataValues.id}}">
+                                <button type="submit" class="btn btn-outline-danger">Deletar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    {{/each}}
+                    {{/if}}
+
+
+                    {{#if Pizza}}
+                    <h2>Menu Pizzas</h2>
+                    {{#each Pizza}}
+                    <form action="/admin/edit-cardapio" method="post">
+                        <input type="hidden" name="id" value="{{dataValues.id}}">
+                        <h4><strong>Nome: </strong><small>{{dataValues.name}}</small></h4>
+                        <h4><strong>Descrição: </strong><small>{{dataValues.desc}}</small></h4>
+                        <h4><strong>Valor Gasto de Material: </strong> <small>R$ {{dataValues.valorGasto}}</small>
+                        </h4>
+                        <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
+                        <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
+                        <button type="submit" class="btn btn-outline-success">Editar</button>
+                    </form>
+                    <form action="/addbd/delete-cardapio" method="post">
+                        <input type="hidden" name="id" value="{{dataValues.id}}">
+                        <button type="submit" class="btn btn-outline-danger">Deletar</button>
+                    </form>
+                    <hr>
+                    {{/each}}
+                    {{/if}}
+
+                    {{#if Bebidas}}
+                    <h2>Menu Bebidas</h2>v
+                    {{#each Bebidas}}
+                    <form action="/admin/edit-cardapio" method="post">
+                        <input type="hidden" name="id" value="{{dataValues.id}}">
+                        <h4><strong>Nome: </strong><small>{{dataValues.name}}</small></h4>
+                        <h4><strong>Descrição: </strong><small>{{dataValues.desc}}</small></h4>
+                        <h4><strong>Valor Gasto de Material: </strong> <small>R$ {{dataValues.valorGasto}}</small>
+                        </h4>
+                        <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
+                        <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
+                        <button type="submit" class="btn btn-outline-success">Editar</button>
+                    </form>
+                    <form action="/addbd/delete-cardapio" method="post">
+                        <input type="hidden" name="id" value="{{dataValues.id}}">
+                        <button type="submit" class="btn btn-outline-danger">Deletar</button>
+                    </form>
+                    <hr>
+                    {{/each}}
+                    {{/if}}
+
+                    {{#if Sorvete}}
+                    <h2>Menu Sorvete</h2>
+                    {{#each Sorvete}}
+                    <form action="/admin/edit-cardapio" method="post">
+                        <h4><strong>Nome: </strong><small>{{dataValues.name}}</small></h4>
+                        <h4><strong>Descrição: </strong><small>{{dataValues.desc}}</small></h4>
+                        <h4><strong>Valor Gasto de Material: </strong> <small>R$ {{dataValues.valorGasto}}</small>
+                        </h4>
+                        <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
+                        <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
+                        <button type="submit" class="btn btn-outline-success">Editar</button>
+                    </form>
+                    <form action="/addbd/delete-cardapio" method="post">
+                        <form action="/admin/edit-cardapio" method="post">
+                            <button type="submit" class="btn btn-outline-danger">Deletar</button>
+                        </form>
+                        <hr>
+                        {{/each}}
+                        {{/if}}
+
+                        {{#if Combos}}
+                        <h2>Menu Combos</h2>
+                        {{#each Combos}}
+                        <form action="/admin/edit-cardapio" method="post">
+                            <input type="hidden" name="id" value="{{dataValues.id}}">
+                            <h4><strong>Nome: </strong><small>{{dataValues.name}}</small></h4>
+                            <h4><strong>Descrição: </strong><small>{{dataValues.desc}}</small></h4>
+                            <h4><strong>Valor Gasto de Material: </strong> <small>R$ {{dataValues.valorGasto}}</small>
+                            </h4>
+                            <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
+                            <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
+                            <button type="submit" class="btn btn-outline-success">Editar</button>
+                        </form>
+                        <form action="/addbd/delete-cardapio" method="post">
+                            <input type="hidden" name="id" value="{{dataValues.id}}">
+                            <button type="submit" class="btn btn-outline-danger">Deletar</button>
+                        </form>
+                        <hr>
+                        {{/each}}
+                        {{/if}}
+
+                        {{#if Promocoes}}
+                        <h2>Menu Promocoes</h2>
+                        {{#each Promoces}}
+                        <form action="" method="post">
+                            <input type="hidden" name="id" value="{{dataValues.id}}">
+                            <h4><strong>Nome: </strong><small>{{dataValues.name}}</small></h4>
+                            <h4><strong>Descrição: </strong><small>{{dataValues.desc}}</small></h4>
+                            <h4><strong>Valor Gasto de Material: </strong> <small>R$ {{dataValues.valorGasto}}</small>
+                            </h4>
+                            <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
+                            <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
+                            <button type="submit" class="btn btn-outline-success">Editar</button>
+                        </form>
+                        <form action="/addbd/delete-cardapio" method="post">
+                            <input type="hidden" name="id" value="{{dataValues.id}}">
+                            <button type="submit" class="btn btn-outline-danger">Deletar</button>
+                        </form>
+                        <hr>
+                        {{/each}}
+                        {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

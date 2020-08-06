@@ -1,0 +1,112 @@
+<section id="dashboard">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">            
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Editar Navegação</h2>
+                        </div>
+                        <div class="p-2">
+                            <span class="d-none d-md-block">
+                                <a href="/admin/edit-nav" class="btn btn-outline-primary btn-sm">Editar</a>
+                            </span>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ações
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                    <a class="dropdown-item" href="/admin/edit-nav">Editar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{>_msg}}
+                    <hr>
+                    {{>_navPrincipal}}
+                    <!-- primeira form -->
+                    <h3>Primeira Navegação</h3>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <h5><strong> Primeira Navegação: </strong>{{nav.dataValues.nav1}}</h5>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h5><strong> Url para Primeira Navegação: </strong>{{nav.dataValues.url_nav1}}</h5>
+                        </div>
+                    </div>
+                    <!-- segunda form -->
+                    <h3>Segunda Navegação</h3>
+                    <div class="form-row mt-3">
+                        <div class="form-group col-md-4">
+                            <h5><strong> Segunda Navegação: </strong>{{nav.dataValues.nav1}}</h5>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h5><strong> Url para Segunda Navegação: </strong>{{nav.dataValues.url_nav2}}</h5>
+                        </div>
+                    </div>
+                    <!-- terceira form -->
+                    <h3>Terceira Navegação</h3>
+                    <div class="form-row mt-3">
+                        <div class="form-group col-md-4">
+                            <h5><strong> Titulo Terceiras Navegações: </strong>{{nav.dataValues.nav3}}</h5>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h5><strong> Titulo Terceira-um Navegação: </strong>{{nav.dataValues.subNav3_1}}</h5>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h5><strong> Url da Terceira-um Navegação: </strong>{{nav.dataValues.url_subNav3_1}}</h5>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <h5><strong> Titulo Terceira-dois Navegação: </strong>{{nav.dataValues.subNav3_2}}</h5>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h5><strong> Url da Terceira-dois Navegação: </strong>{{nav.dataValues.url_subNav3_2}}</h5>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <h5><strong> Titulo Terceira-dois Navegação: </strong>{{nav.dataValues.subNav3_3}}</h5>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h5><strong> Url da Terceira-dois Navegação: </strong>{{nav.dataValues.url_subNav3_3}}</h5>
+                        </div>
+                    </div>
+                    <!-- Quarta form -->
+                    <h3>Quarta Navegação</h3>
+                    <div class="form-row mt-3">
+                        <div class="form-group col-md-4">
+                            <h5><strong> Quarta Navegação: </strong>{{nav.dataValues.nav4}}</h5>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h5><strong> Quarta-um Navegação: </strong>{{nav.dataValues.nav4_1}}</h5>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h5><strong> Url da Quarta-um Navegação: </strong>{{nav.dataValues.url_subNav4_1}}</h5>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <h5><strong> Quarta-dois Navegação: </strong>{{nav.dataValues.nav4_2}}</h5>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h5><strong> Url da Quarta-dois Navegação: </strong>{{nav.dataValues.url_subNav4_2}}</h5>
+                        </div>
+                    </div>
+                    <!-- Quinta form -->
+                    <h3>Quinta Navegação</h3>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <h5><strong> Quinta Navegação: </strong>{{nav.dataValues.nav4_2}}</h5>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h5><strong> Url da Quinta Navegação: </strong>{{nav.dataValues.url_subNav4_2}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
