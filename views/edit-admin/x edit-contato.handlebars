@@ -1,0 +1,133 @@
+<section id="dashboard">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">            
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Editar Pagina Contato</h2>
+                        </div>
+                        <div class="p-2">
+                            <span class="d-none d-md-block">
+                                <a href="/visAdmin/vis-contato" class="btn btn-outline-primary btn-sm">Visualizar</a>
+                            </span>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ações
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                    <a class="dropdown-item" href="/visAdmin/vis-contato">Visualizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <form action="" method="POST">
+                        <input name="id" type="hidden" value="{{slideshow.dataValues.id}}">
+                        <h4>Carregamento das Imagens</h2>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Imagem já carregadas</label>
+                                    <div class="custom-file">
+                                        <select name="" id="" class="form form-control">
+                                            <option value="{{slideshow.dataValues.img1}}">{{slideshow.dataValues.img1}}
+                                            </option>
+                                            <option value="{{slideshow.dataValues.img2}}">{{slideshow.dataValues.img2}}
+                                            </option>
+                                            <option value="{{slideshow.dataValues.img3}}">{{slideshow.dataValues.img3}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Nome da primeira Imagem e sua
+                                        extensão</label>
+                                    <input name="title" type="text" class="form-control" id="title"
+                                        placeholder="Digite o nome do arquivo e sua extensão ex: img.png"
+                                        value="{{slideshow.dataValues.title1_1}}" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Carregue a Imagem</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile" border="1">
+                                        <label class="custom-file-label" for="customFile">Carregar Arquivo</label>
+                                    </div>
+                                </div>
+                                <button class="btn btn-info">Enviar</button>
+                            </div>
+                    </form>
+                    <!-- ============================ Segundo Form ========================================= -->
+                    <h4 class="mt-5">Editar Scripts da pagina Contato</h4>
+                    <form action="/addbd/contato" method="post">
+                        <input name="id" type="hidden" value="{{contato.dataValues.id}}">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Titulo principal da página</label>
+                                <input name="title" type="text" class="form-control" id="title"
+                                    placeholder="Digite o titulo principal" value="{{contato.dataValues.title}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Titulo principal da página</label>
+                                <input name="subtitle" type="text" class="form-control" id="subtitle"
+                                    placeholder="Digite o titulo principal" value="{{contato.dataValues.subtitle}}"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label><span class="text-danger">* </span>Titulo principal da página</label>
+                                <input name="desc" type="text" class="form-control" id="desc"
+                                    placeholder="Digite o titulo principal" value="{{contato.dataValues.desc}}"
+                                    required>
+                            </div>
+                        </div>
+                        <h4 class="mt-5">Menssagem de instrução nos campos do formulário contato</h4>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>placeholder do primeiro campo</label>
+                                <input name="placeholder1" type="text" class="form-control" id="placeholder1"
+                                    placeholder="Digite o placeholder do primeiro campo"
+                                    value="{{contato.dataValues.placeholder1}}" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>placeholder do segundo campo</label>
+                                <input name="placeholder2" type="text" class="form-control" id="placeholder2"
+                                    placeholder="Digite o placeholder do segundo campo"
+                                    value="{{contato.dataValues.placeholder2}}" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>placeholder do terceiro campo</label>
+                                <input name="placeholder3" type="text" class="form-control" id="placeholder3"
+                                    placeholder="Digite o placeholder do terceiro campo"
+                                    value="{{contato.dataValues.placeholder3}}" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>placeholder do quarto campo</label>
+                                <input name="placeholder4" type="text" class="form-control" id="placeholder4"
+                                    placeholder="Digite o placeholder do quarto campo"
+                                    value="{{contato.dataValues.placeholder4}}" required>
+                            </div>
+                        </div>
+                        <h4 class="mt-5">Titulo do Botão</h4>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label><span class="text-danger">* </span>Titulo do botão</label>
+                                <input name="title_btn" type="text" class="form-control" id="title_btn"
+                                    placeholder="Digite o Titulo do botão" value="{{contato.dataValues.title_btn}}"
+                                    required>
+                            </div>
+                        </div>
+                        <p class="mt-4">
+                            <span class="text-danger">* </span>Todos os campos são obrigatórios
+                        </p>
+                        <button type="submit" class="btn btn-warning">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,85 @@
+<section id="dashboard">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">            
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Editar Cardápios</h2>
+                        </div>
+                        <div class="p-2">
+                            <span class="d-none d-md-block">
+                                <a href="/admin/edit-cardapios" class="btn btn-outline-primary btn-sm">Visualizar</a>
+                            </span>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ações
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                    <a class="dropdown-item" href="/admin/edit-cardapios">Editar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{>_msg}}
+                    <hr>
+
+
+                    <!-- Start All Pages -->
+                    <div class="all-page-title page-breadcrumb">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h1>Menus</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End All Pages -->
+
+                    <!-- Start Contact -->
+
+                    <div class="contact-box">
+                        <div class="container">
+                            <h4 class="mt-5">Formulário</h4>
+                            <form action="/addbd/edit-menu" method="post">
+                            <input type="hidden" name="id" value="{{menu.dataValues.id}}">                                
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label><span class="text-danger">* </span>Nome</label>
+                                        <input name="name" type="text" class="form-control" id="title"
+                                            placeholder="Digite o Nome do Aperitivo a ser Cadastrado" value="{{menu.dataValues.name}}" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label><span class="text-danger">* </span>Descrição</label>
+                                        <textarea name="desc" class="form-control" id="desc" cols="30" rows="10"
+                                            required placeholder="Digite a descrição principal">{{menu.dataValues.desc}}</textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label><span class="text-danger">* </span>Valor para Produzir</label>
+                                        <input name="valorGasto" type="text" class="form-control" id="tabela1"
+                                            placeholder="Digite o valor gasto para produzir este produto" value="{{menu.dataValues.valorGasto}}" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label><span class="text-danger">* </span>Valor para Venda</label>
+                                        <input name="valorVenda" type="text" class="form-control" id="title"
+                                            placeholder="Digite o Nome do Aperitivo a ser Cadastrado" value="{{menu.dataValues.valorVenda}}" required>
+                                    </div>
+                                </div>
+
+                                <p class="mt-4">
+                                    <span class="text-danger">* </span>Todos os campos são obrigatórios
+                                </p>
+                                <button type="submit" class="btn btn-warning">Salvar</button>
+                            </form>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
