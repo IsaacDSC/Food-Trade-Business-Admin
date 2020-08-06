@@ -30,49 +30,93 @@
                     <!-- horizontal form -->
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <form action="/aperitivos/cadastrar" method="post">
+                        
                             <div class="card">
                                 <h5 class="card-header">Cadastro do Produto Aperitivo</h5>
                                 <div class="card-body">
-                                    <form id="form" data-parsley-validate="" novalidate="">                                       
-                                        <div class="form-group">
-                                            <label for="nomeAperitivo">Nome do Aperitivo</label>
-                                            <input type="text" name="nomeAperitivo" id="nomeAperitivo"
-                                                class="form-control" placeholder="Digite o nome do Aperitivo">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="descAperitivo">Descrição do Aperitivo</label>
-                                            <textarea name="descAperitivo" id="descAperitivo" cols="30" rows="10"
-                                                class="form-control"
-                                                placeholder="Digite a descrição deste aperitivo"></textarea>
-                                        </div>  
-                                        <div class="form-group">
-                                            <label for="valorAperitivo">Valor Aperitivo</label>
-                                            <input type="text" name="valorAperitivo" id="valorAperitivo"
-                                                class="form-control" placeholder="Digite o valor do Aperitivo">
-                                        </div>   
-                                         <div class="form-group">
-                                            <label for="gastoAperitivo">Valor Gasto Aperitivo</label>
-                                            <input type="text" name="gastoAperitivo" id="gastoAperitivo"
-                                                class="form-control" placeholder="Digite o valor gasto do Aperitivo">
-                                        </div>                                   
-                                        <hr>
-                                        <div class="row pt-2 pt-sm-5 mt-1">
-                                            <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                                <label class="be-checkbox custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"><span
-                                                        class="custom-control-label">Remember me</span>
-                                                </label>
-                                            </div>
-                                            <div class="col-sm-6 pl-0">
-                                                <p class="text-right">
-                                                    <button type="submit"
-                                                        class="btn btn-space btn-primary">Submit</button>
-                                                    <button class="btn btn-space btn-secondary">Cancel</button>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    <form action="/addBd/history" method="post">
+                        <input name="id" type="hidden" value="{{slideshow.dataValues.id}}">
+                        <h4 class="mt-5">Carregamento das Imagens</h2>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span>Imagem já carregadas</label>
+                                    <div class="custom-file">
+                                        <select name="" id="" class="form form-control">
+                                            <option value="null">Selecione uma Imagem</option>
+                                            {{#each paths}}
+                                            <option value="{{this}}">{{this}}</option>
+                                            {{/each}}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Titulo(parte-um)</label>
+                                    <input name="title1" type="text" class="form-control" id="title1"
+                                        placeholder="Digite o nome da navegação" value="{{hisHome.dataValues.title1}}"
+                                        required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Titulo(parte-dois)</label>
+                                    <input name="title2" type="text" class="form-control" id="title2"
+                                        placeholder="Digite o nome da navegação" value="{{hisHome.dataValues.title2}}"
+                                        required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label><span class="text-danger">* </span>Subtitulo</label>
+                                    <input name="subtitle" type="text" class="form-control" id="subtitle"
+                                        placeholder="Digite o nome da navegação" value="{{hisHome.dataValues.subtitle}}"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span>Primeiro Paragrafo</label>
+                                    <textarea name="paragraph1" id="paragraph1" cols="30" rows="10" class="form-control"
+                                        placeholder="Digite seu primeiro paragrafo">{{hisHome.dataValues.paragraph1}}</textarea>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span>Segundo Paragrafo</label>
+                                    <textarea name="paragraph2" id="paragraph2" cols="30" rows="10" class="form-control"
+                                        placeholder="Digite seu Segundo paragrafo">{{hisHome.dataValues.paragraph2}}</textarea>
+                                </div>
+                            </div>
+                            <h4 class="mt-5">Formulário para Editar Botões</h4>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span>Titulo do Botão</label>
+                                    <input name="btnTitle" type="text" class="form-control" id="btnTitle"
+                                        placeholder="Digite o titulo do botão" value="{{hisHome.dataValues.btnTitle}}"
+                                        required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span>URL do Botão</label>
+                                    <input name="url_btn" type="text" class="form-control" id="url_btn"
+                                        placeholder="Digite a URL do botão" value="{{hisHome.dataValues.url_btn}}"
+                                        required>
+                                </div>
+                            </div>
+                            <h4 class=" mt-5">Visão da Empresa</h4>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span>Frase</label>
+                                    <input name="vision_mission" type="text" class="form-control" id="vision_mission"
+                                        placeholder="Digite a Frase" value="{{hisHome.dataValues.vision_mission}}"
+                                        required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span>Autor</label>
+                                    <input name="author" type="text" class="form-control" id="author"
+                                        placeholder="Digite a Autor" value="{{hisHome.dataValues.author}}" required>
+                                </div>
+                            </div>
+                            <p class="mt-4">
+                                <span class="text-danger">* </span>Todos os campos são obrigatórios
+                            </p>
+                            <button type="submit" class="btn btn-warning">Salvar</button>
+                    </form>
                                 </div>
                             </div>
                     </div>
@@ -80,43 +124,11 @@
                     <!-- end horizontal form -->
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <form action="/aperitivos/cadastrar_opc" method="post">
+                        
                             <div class="card">
                                 <h5 class="card-header">Opções Aperitivos</h5>
                                 <div class="card-body">
-                                    <form id="form" data-parsley-validate="" novalidate="">                                       
-                                        <div class="form-group">
-                                            <label for="nome">Nome da opção Aperitivo</label>
-                                            <input type="text" name="nome" id="nome"
-                                                class="form-control" placeholder="Digite o nome da opção do Aperitivo">
-                                        </div>                                         
-                                        <div class="form-group">
-                                            <label for="valor">Valor da Opção Aperitivo</label>
-                                            <input type="text" name="valor" id="valor"
-                                                class="form-control" placeholder="Digite o valor da opção do Aperitivo">
-                                        </div>   
-                                         <div class="form-group">
-                                            <label for="gasto">Valor da Opção Gasto Aperitivo</label>
-                                            <input type="text" name="gasto" id="gasto"
-                                                class="form-control" placeholder="Digite o valor gasto da opção do Aperitivo">
-                                        </div>                                   
-                                        <hr>
-                                        <div class="row pt-2 pt-sm-5 mt-1">
-                                            <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                                <label class="be-checkbox custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"><span
-                                                        class="custom-control-label">Remember me</span>
-                                                </label>
-                                            </div>
-                                            <div class="col-sm-6 pl-0">
-                                                <p class="text-right">
-                                                    <button type="submit"
-                                                        class="btn btn-space btn-primary">Submit</button>
-                                                    <button class="btn btn-space btn-secondary">Cancel</button>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    
                                 </div>
                             </div>
                     </div>

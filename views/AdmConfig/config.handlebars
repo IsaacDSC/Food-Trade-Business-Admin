@@ -34,45 +34,23 @@
                             <div class="card">
                                 <h5 class="card-header">Cadastro do Produto Aperitivo</h5>
                                 <div class="card-body">
-                                    <form id="form" data-parsley-validate="" novalidate="">                                       
-                                        <div class="form-group">
-                                            <label for="nomeAperitivo">Nome do Aperitivo</label>
-                                            <input type="text" name="nomeAperitivo" id="nomeAperitivo"
-                                                class="form-control" placeholder="Digite o nome do Aperitivo">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="descAperitivo">Descrição do Aperitivo</label>
-                                            <textarea name="descAperitivo" id="descAperitivo" cols="30" rows="10"
-                                                class="form-control"
-                                                placeholder="Digite a descrição deste aperitivo"></textarea>
-                                        </div>  
-                                        <div class="form-group">
-                                            <label for="valorAperitivo">Valor Aperitivo</label>
-                                            <input type="text" name="valorAperitivo" id="valorAperitivo"
-                                                class="form-control" placeholder="Digite o valor do Aperitivo">
-                                        </div>   
-                                         <div class="form-group">
-                                            <label for="gastoAperitivo">Valor Gasto Aperitivo</label>
-                                            <input type="text" name="gastoAperitivo" id="gastoAperitivo"
-                                                class="form-control" placeholder="Digite o valor gasto do Aperitivo">
-                                        </div>                                   
-                                        <hr>
-                                        <div class="row pt-2 pt-sm-5 mt-1">
-                                            <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                                <label class="be-checkbox custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"><span
-                                                        class="custom-control-label">Remember me</span>
-                                                </label>
-                                            </div>
-                                            <div class="col-sm-6 pl-0">
-                                                <p class="text-right">
-                                                    <button type="submit"
-                                                        class="btn btn-space btn-primary">Submit</button>
-                                                    <button class="btn btn-space btn-secondary">Cancel</button>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    <form action="" method="post">
+                                <div class="row">
+                                    <div class="form-group col-2 ml-5 mr-2">
+                                        <label for="">Cor de Fundo Preta</label>
+                                        <input type="radio" name="corFundo" id="corFundo" value="preto">
+                                    </div>
+                                    <div class="form-group col-3 ml-5">
+                                        <label for="">Cor de Fundo Branca</label>
+                                        <input type="radio" name="corFundo" id="corFundo" value="branco">
+                                    </div>
+                                    <div class="form-group col-2">
+                                        <label for="">Cor de Fundo Cinza</label>
+                                        <input type="radio" name="corFundo" id="corFundo" value="cinza">
+                                    </div>
+                                </div>
+                                <button class="btn btn-success text-center">Enviar</button>
+                            </form>
                                 </div>
                             </div>
                     </div>
