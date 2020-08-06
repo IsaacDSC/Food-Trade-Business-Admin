@@ -3,7 +3,7 @@ const router = express.Router()
 const passport = require('passport')
 
 router.get('/', (req, res) => {
-    res.render('login/loginAdmin')
+    res.render('login/loginAdmin', { layout: 'login_register.handlebars' })
 })
 
 

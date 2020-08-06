@@ -13,9 +13,13 @@ const Menu = require('../models/Menu')
 const CardapioHome = require('../models/CardapiosHome_models')
 const MenuBurger = require('../models/MenuBurger')
 
-router.get('/vis-headernav', (req, res) => {
+router.get('/', (req, res) => {
+    res.render('vis-admin/vis')
+})
+
+router.get('/vis-nav', (req, res) => {
     HeaderNav.findOne().then((nav) => {
-        res.render('vis-admin/vis-headerNav', { nav: nav })
+        res.render('vis-admin/vis-nav', { nav: nav })
     }).catch((err) => {
         res.send('Error ao Carregar models header nav na rota vis-headernav ' + err)
     })

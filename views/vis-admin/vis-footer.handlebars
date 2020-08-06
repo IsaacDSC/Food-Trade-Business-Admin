@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="page-header">
-                    <h2 class="pageheader-title">Formulário Adionar Aperitivos</h2>
+                    <h2 class="pageheader-title">Visualizar Página</h2>
                     <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit
                         amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                     <div class="page-breadcrumb">
@@ -30,13 +30,21 @@
         <!-- horizontal form -->
         <!-- ============================================================== -->
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="card">
-                    <h5 class="card-header">Visualizar Footer</h5>
-                    <div class="card-body">
-                        {{>_footer_contact}}
-                        {{>_footer}}
-                    </div>
+            <div class="card">
+                <h5 class="card-header text-center">Visualizar Rodapé do Site</h5>
+                <div class="btn-group text-center col-12 mt-3" role="group" aria-label="Basic example">
+                    <p class="col-4"></p>
+                    <a href="/admin/edit-footer" class=""><button type="button" class="btn btn-success  ">Editar
+                            Rodapé do Site</button></a>
+                    <a href="/visAdmin" class="ml-1"><button type="button" class="btn btn-primary  ">Menu Visualizar
+                            Paginas</button></a>
                 </div>
+                <hr>
+                <div class="card-body">
+                    {{>_footer_contact}}
+                    {{>_footer}}
+                </div>
+            </div>
         </div>
         <!-- ============================================================== -->
         <!-- end horizontal form -->

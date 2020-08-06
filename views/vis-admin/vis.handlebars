@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="page-header">
-                    <h2 class="pageheader-title">Visualizar Página</h2>
+                    <h2 class="pageheader-title">Formulário para Editar Paginas</h2>
                     <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit
                         amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                     <div class="page-breadcrumb">
@@ -30,18 +30,33 @@
         <!-- horizontal form -->
         <!-- ============================================================== -->
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
             <div class="card">
-                <h5 class="card-header text-center">Visualizar Campo History da Página Inicial</h5>
-                <div class="btn-group text-center col-12 mt-3" role="group" aria-label="Basic example">
-                    <p class="col-4"></p>
-                    <a href="/admin/edit-history" class=""><button type="button" class="btn btn-success  ">Editar
-                            History</button></a>
-                    <a href="/visAdmin" class="ml-1"><button type="button" class="btn btn-primary  ">Menu Visualizar
-                            Paginas</button></a>
-                </div>
-                <hr>
+                <h5 class="card-header text-center">Paginas para Visualizar</h5>
                 <div class="card-body">
-                    {{>_history_vision}}
+                    <div class="btn-group col-12" role="group" aria-label="Basic example">
+                        <a href="/visAdmin/vis-nav" class="btn btn-primary col-4"><button type="button" class="btn btn-primary">Navegação</button></a>
+                        <a href="/visAdmin/vis-slideshow" class="btn btn-primary col-4"><button type="button" class="btn btn-primary">Slideshow</button></a>
+                        <a href="/visAdmin/vis-history" class="btn btn-primary col-4"><button type="button" class="btn btn-primary">History</button></a>
+                        <a href="/visAdmin/" class="btn btn-primary col-4"><button type="button" class="btn btn-primary">Galeria</button></a>
+                        <a href="/visAdmin/vis-footer" class="btn btn-primary col-4"><button type="button" class="btn btn-primary">Footer</button></a>                                
+                        <a href="/visAdmin/vis-contato" class="btn btn-primary col-4"><button type="button" class="btn btn-primary">Contato</button></a>                                
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="card">
+                <h5 class="card-header text-center">Local para adionar um tutorial ensinando a Visualizar as paginas</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <video controls class="col-12">
+                                <source type="video/mp4" src="/video/exemplo.mp4">
+                            </video>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,4 +64,3 @@
         <!-- end horizontal form -->
         <!-- ============================================================== -->
     </div>
-</div>

@@ -8,8 +8,8 @@ const flash = require('connect-flash')
 const passport = require('passport')
 require('./config/auth')(passport)
 
-const routes = require('./routes/routes')
-    //adionando login Administrador Site
+
+//adionando login Administrador Site
 const superUser = require('./routes/superUser')
     //adicionando tela de adm
 const admin = require('./routes/admin')
@@ -59,7 +59,6 @@ app.use('/addbd', addBd)
 app.use('/uploadfiles', uploafiles)
 app.use('/reset', reset)
 app.use('/montarPedido', montarPedido)
-app.use(routes)
 
 const PORT = 3001
 app.listen(PORT, () => {

@@ -1,347 +1,351 @@
 <div class="dashboard-wrapper">
-        <div class="container-fluid  dashboard-content">
-            <!-- ============================================================== -->
-            <!-- pageheader -->
-            <!-- ============================================================== -->
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="page-header">
-                        <h2 class="pageheader-title">Formulário Adionar Aperitivos</h2>
-                        <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit
-                            amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
-                        <div class="page-breadcrumb">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Forms</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Form Validations</li>
-                                </ol>
-                            </nav>
-                        </div>
+    <div class="container-fluid  dashboard-content">
+        <!-- ============================================================== -->
+        <!-- pageheader -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="page-header">
+                    <h2 class="pageheader-title">Formulário Adionar Aperitivos</h2>
+                    <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit
+                        amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                    <div class="page-breadcrumb">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Forms</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Form Validations</li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- end pageheader -->
-            <!-- ============================================================== -->
-            {{>_msg}}
+        </div>
+        <!-- ============================================================== -->
+        <!-- end pageheader -->
+        <!-- ============================================================== -->
+        {{>_msg}}
 
-                    <!-- ============================================================== -->
-                    <!-- horizontal form -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <form action="/aperitivos/cadastrar" method="post">
-                            <div class="card">
-                                <h5 class="card-header">Cadastro do Produto Aperitivo</h5>
-                                <div class="card-body">
-                                    <form action="/admin/" method="POST">
-                        <input name="id" type="hidden" value="{{slideshow.dataValues.id}}">
-                        <h4>Carregamento das Imagens</h2>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label><span class="text-danger">* </span>Imagem já carregadas</label>
-                                    <div class="custom-file">
-                                        <select name="" id="" class="form form-control">
-                                            <option value="{{slideshow.dataValues.img1}}">{{slideshow.dataValues.img1}}
-                                            </option>
-                                            <option value="{{slideshow.dataValues.img2}}">{{slideshow.dataValues.img2}}
-                                            </option>
-                                            <option value="{{slideshow.dataValues.img3}}">{{slideshow.dataValues.img3}}
-                                            </option>
-                                        </select>
+        <!-- ============================================================== -->
+        <!-- horizontal form -->
+        <!-- ============================================================== -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <form action="/aperitivos/cadastrar" method="post">
+                <div class="card">
+                    <h5 class="card-header">Cadastro do Produto Aperitivo</h5>
+                    <div class="card-body">
+                        <form action="/admin/" method="POST">
+                            <input name="id" type="hidden" value="{{slideshow.dataValues.id}}">
+                            <h4>Carregamento das Imagens</h2>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label><span class="text-danger">* </span>Imagem já carregadas</label>
+                                        <div class="custom-file">
+                                            <select name="" id="" class="form form-control">
+                                                <option value="{{slideshow.dataValues.img1}}">
+                                                    {{slideshow.dataValues.img1}}
+                                                </option>
+                                                <option value="{{slideshow.dataValues.img2}}">
+                                                    {{slideshow.dataValues.img2}}
+                                                </option>
+                                                <option value="{{slideshow.dataValues.img3}}">
+                                                    {{slideshow.dataValues.img3}}
+                                                </option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label><span class="text-danger">* </span>Nome da primeira Imagem e sua
-                                        extensão</label>
-                                    <input name="title" type="text" class="form-control" id="title"
-                                        placeholder="Digite o nome do arquivo e sua extensão ex: img.png"
-                                        value="{{slideshow.dataValues.title1_1}}" required>
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label><span class="text-danger">* </span>Carregue a Imagem</label>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="customFile" border="1">
-                                        <label class="custom-file-label" for="customFile">Carregar Arquivo</label>
+                                    <div class="form-group col-md-4">
+                                        <label><span class="text-danger">* </span>Nome da primeira Imagem e sua
+                                            extensão</label>
+                                        <input name="title" type="text" class="form-control" id="title"
+                                            placeholder="Digite o nome do arquivo e sua extensão ex: img.png"
+                                            value="{{slideshow.dataValues.title1_1}}" required>
                                     </div>
+                                    <div class="form-group col-md-4">
+                                        <label><span class="text-danger">* </span>Carregue a Imagem</label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFile" border="1">
+                                            <label class="custom-file-label" for="customFile">Carregar Arquivo</label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-info">Enviar</button>
                                 </div>
-                                <button class="btn btn-info">Enviar</button>
-                            </div>
-                    </form>
-                                </div>
-                            </div>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- end horizontal form -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <form action="/aperitivos/cadastrar_opc" method="post">
-                            <div class="card">
-                                <h5 class="card-header">Opções Aperitivos</h5>
-                                <div class="card-body">
-                                    <form action="/addbd/menuburger" method="post">
-                        <input name="id" type="hidden" value="{{cardHome.dataValues.id}}">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="title" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo principal" value="{{cardHome.dataValues.title}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="subititle" class="form-control" id="subititle" cols="30" rows="10"
-                                    required
-                                    placeholder="Digite a descrição principal">{{cardHome.dataValues.subtitle}}</textarea>
-                            </div>
-                        </div>
-
-
-                        <h4 class="mt-5"> 01 - Editar Navegação ({{cardHome.dataValues.nav2}})</h4>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 01-I - Nome Navegação</label>
-                                <input name="nav2" type="text" class="form-control" id="nav2"
-                                    placeholder="Digite o titulo da navegação um" value="{{cardHome.dataValues.nav2}}"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="form-row mt-3">
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 01-I - Imagem</label>
-                                <select name="img2_1" id="img2_1" class="form-control">
-                                    <option value="">{{cardHome.dataValues.img2_1}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 01-I - Titulo</label>
-                                <input name="title2_1" type="text" class="form-control" id="title2_1"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.title2_1}}" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 01-I - Descrição</label>
-                                <input name="desc2_1" type="text" class="form-control" id="desc2_1"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.desc2_2}}" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row mt-3 mt-3">
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 01-II - Imagem</label>
-                                <select name="img2_2" id="img2_2" class="form-control">
-                                    <option value="">{{cardHome.dataValues.img2_2}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 01-II - Titulo</label>
-                                <input name="title2_2" type="text" class="form-control" id="title2_2"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.title2_2}}" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 01-II - Descrição</label>
-                                <input name="desc2_2" type="text" class="form-control" id="desc2_2"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.desc2_2}}" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row mt-3">
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 01-III - Imagem</label>
-                                <select name="img2_3" id="img2_3" class="form-control">
-                                    <option value="">{{cardHome.dataValues.img2_3}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 01-III - Titulo</label>
-                                <input name="title2_3" type="text" class="form-control" id="title2_3"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.title2_3}}" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 01-II - Descrição</label>
-                                <input name="desc2_3" type="text" class="form-control" id="desc2_3"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.desc2_3}}" required>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <h4 class="mt-5"> 02 - Editar Navegação({{cardHome.dataValues.nav3}})</h4>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 02-I - Nome Navegação</label>
-                                <input name="nav3" type="text" class="form-control" id="nav3"
-                                    placeholder="Digite o titulo da navegação um" value="{{cardHome.dataValues.nav3}}"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="form-row mt-3">
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-I - Imagem</label>
-                                <select name="img3_1" id="img3_1" class="form-control">
-                                    <option value="">{{cardHome.dataValues.img3_1}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-I - Titulo</label>
-                                <input name="title3_1" type="text" class="form-control" id="title3_1"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.title3_1}}" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 02-I - Descrição</label>
-                                <input name="desc3_1" type="text" class="form-control" id="desc3_1"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.desc3_1}}" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row mt-3 mt-3">
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-II - Imagem</label>
-                                <select name="img3_2" id="img3_2" class="form-control">
-                                    <option value="">{{cardHome.dataValues.img3_2}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-II - Titulo</label>
-                                <input name="title3_2" type="text" class="form-control" id="title3_2"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.title3_2}}" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 02-II - Descrição</label>
-                                <input name="desc3_2" type="text" class="form-control" id="desc3_2"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.desc3_2}}" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row mt-3">
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-III - Imagem</label>
-                                <select name="img3_3" id="img3_3" class="form-control">
-                                    <option value="">{{cardHome.dataValues.img3_3}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-III - Titulo</label>
-                                <input name="title3_3" type="text" class="form-control" id="title3_3"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.title3_3}}" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 02-II - Descrição</label>
-                                <input name="desc3_3" type="text" class="form-control" id="desc3_3"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.desc3_3}}" required>
-                            </div>
-                        </div>
-
-
-
-                        <h4 class="mt-5"> 03 - Editar Navegação({{cardHome.dataValues.nav4}})</h4>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 02-I - Nome Navegação</label>
-                                <input name="nav4" type="text" class="form-control" id="nav4"
-                                    placeholder="Digite o titulo da navegação um" value="{{cardHome.dataValues.nav4}}"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="form-row mt-3">
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-I - Imagem</label>
-                                <select name="img4_1" id="img4_1" class="form-control">
-                                    <option value="">{{cardHome.dataValues.img4_1}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-I - Titulo</label>
-                                <input name="title4_1" type="text" class="form-control" id="title4_1"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.title4_1}}" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 02-I - Descrição</label>
-                                <input name="desc4_1" type="text" class="form-control" id="desc4_1"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.desc4_1}}" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row mt-3 mt-3">
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-II - Imagem</label>
-                                <select name="img4_2" id="img4_2" class="form-control">
-                                    <option value="">{{cardHome.dataValues.img4_2}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-II - Titulo</label>
-                                <input name="title4_2" type="text" class="form-control" id="title4_2"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.title4_2}}" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 02-II - Descrição</label>
-                                <input name="desc4_2" type="text" class="form-control" id="desc4_2"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.desc4_2}}" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row mt-3">
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-III - Imagem</label>
-                                <select name="img4_3" id="img4_3" class="form-control">
-                                    <option value="">{{cardHome.dataValues.img4_3}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span> 02-III - Titulo</label>
-                                <input name="title4_3" type="text" class="form-control" id="title4_3"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.title4_3}}" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label><span class="text-danger">* </span> 02-II - Descrição</label>
-                                <input name="desc4_3" type="text" class="form-control" id="desc4_3"
-                                    placeholder="Digite o titulo da navegação três"
-                                    value="{{cardHome.dataValues.desc4_3}}" required>
-                            </div>
-                        </div>
-                        <p class="mt-4">
-                            <span class="text-danger">* </span>Todos os campos são obrigatórios
-                        </p>
-                        <button type="submit" class="btn btn-warning">Salvar</button>
-                    </form>
-                                </div>
-                            </div>
+                        </form>
                     </div>
                 </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end horizontal form -->
+        <!-- ============================================================== -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <form action="/aperitivos/cadastrar_opc" method="post">
+                <div class="card">
+                    <h5 class="card-header">Opções Aperitivos</h5>
+                    <div class="card-body">
+                        <form action="/addbd/menuburger" method="post">
+                            <input name="id" type="hidden" value="{{cardHome.dataValues.id}}">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span>Titulo principal</label>
+                                    <input name="title" type="text" class="form-control" id="title"
+                                        placeholder="Digite o titulo principal" value="{{cardHome.dataValues.title}}"
+                                        required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span>Descrição principal</label>
+                                    <textarea name="subititle" class="form-control" id="subititle" cols="30" rows="10"
+                                        required
+                                        placeholder="Digite a descrição principal">{{cardHome.dataValues.subtitle}}</textarea>
+                                </div>
+                            </div>
+
+
+                            <h4 class="mt-5"> 01 - Editar Navegação ({{cardHome.dataValues.nav2}})</h4>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 01-I - Nome Navegação</label>
+                                    <input name="nav2" type="text" class="form-control" id="nav2"
+                                        placeholder="Digite o titulo da navegação um"
+                                        value="{{cardHome.dataValues.nav2}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row mt-3">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 01-I - Imagem</label>
+                                    <select name="img2_1" id="img2_1" class="form-control">
+                                        <option value="">{{cardHome.dataValues.img2_1}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 01-I - Titulo</label>
+                                    <input name="title2_1" type="text" class="form-control" id="title2_1"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.title2_1}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 01-I - Descrição</label>
+                                    <input name="desc2_1" type="text" class="form-control" id="desc2_1"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.desc2_2}}" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-3 mt-3">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 01-II - Imagem</label>
+                                    <select name="img2_2" id="img2_2" class="form-control">
+                                        <option value="">{{cardHome.dataValues.img2_2}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 01-II - Titulo</label>
+                                    <input name="title2_2" type="text" class="form-control" id="title2_2"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.title2_2}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 01-II - Descrição</label>
+                                    <input name="desc2_2" type="text" class="form-control" id="desc2_2"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.desc2_2}}" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-3">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 01-III - Imagem</label>
+                                    <select name="img2_3" id="img2_3" class="form-control">
+                                        <option value="">{{cardHome.dataValues.img2_3}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 01-III - Titulo</label>
+                                    <input name="title2_3" type="text" class="form-control" id="title2_3"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.title2_3}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 01-II - Descrição</label>
+                                    <input name="desc2_3" type="text" class="form-control" id="desc2_3"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.desc2_3}}" required>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <h4 class="mt-5"> 02 - Editar Navegação({{cardHome.dataValues.nav3}})</h4>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 02-I - Nome Navegação</label>
+                                    <input name="nav3" type="text" class="form-control" id="nav3"
+                                        placeholder="Digite o titulo da navegação um"
+                                        value="{{cardHome.dataValues.nav3}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row mt-3">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-I - Imagem</label>
+                                    <select name="img3_1" id="img3_1" class="form-control">
+                                        <option value="">{{cardHome.dataValues.img3_1}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-I - Titulo</label>
+                                    <input name="title3_1" type="text" class="form-control" id="title3_1"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.title3_1}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 02-I - Descrição</label>
+                                    <input name="desc3_1" type="text" class="form-control" id="desc3_1"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.desc3_1}}" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-3 mt-3">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-II - Imagem</label>
+                                    <select name="img3_2" id="img3_2" class="form-control">
+                                        <option value="">{{cardHome.dataValues.img3_2}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-II - Titulo</label>
+                                    <input name="title3_2" type="text" class="form-control" id="title3_2"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.title3_2}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 02-II - Descrição</label>
+                                    <input name="desc3_2" type="text" class="form-control" id="desc3_2"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.desc3_2}}" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-3">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-III - Imagem</label>
+                                    <select name="img3_3" id="img3_3" class="form-control">
+                                        <option value="">{{cardHome.dataValues.img3_3}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-III - Titulo</label>
+                                    <input name="title3_3" type="text" class="form-control" id="title3_3"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.title3_3}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 02-II - Descrição</label>
+                                    <input name="desc3_3" type="text" class="form-control" id="desc3_3"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.desc3_3}}" required>
+                                </div>
+                            </div>
+
+
+
+                            <h4 class="mt-5"> 03 - Editar Navegação({{cardHome.dataValues.nav4}})</h4>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 02-I - Nome Navegação</label>
+                                    <input name="nav4" type="text" class="form-control" id="nav4"
+                                        placeholder="Digite o titulo da navegação um"
+                                        value="{{cardHome.dataValues.nav4}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row mt-3">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-I - Imagem</label>
+                                    <select name="img4_1" id="img4_1" class="form-control">
+                                        <option value="">{{cardHome.dataValues.img4_1}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-I - Titulo</label>
+                                    <input name="title4_1" type="text" class="form-control" id="title4_1"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.title4_1}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 02-I - Descrição</label>
+                                    <input name="desc4_1" type="text" class="form-control" id="desc4_1"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.desc4_1}}" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-3 mt-3">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-II - Imagem</label>
+                                    <select name="img4_2" id="img4_2" class="form-control">
+                                        <option value="">{{cardHome.dataValues.img4_2}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-II - Titulo</label>
+                                    <input name="title4_2" type="text" class="form-control" id="title4_2"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.title4_2}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 02-II - Descrição</label>
+                                    <input name="desc4_2" type="text" class="form-control" id="desc4_2"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.desc4_2}}" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row mt-3">
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-III - Imagem</label>
+                                    <select name="img4_3" id="img4_3" class="form-control">
+                                        <option value="">{{cardHome.dataValues.img4_3}}</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label><span class="text-danger">* </span> 02-III - Titulo</label>
+                                    <input name="title4_3" type="text" class="form-control" id="title4_3"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.title4_3}}" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span> 02-II - Descrição</label>
+                                    <input name="desc4_3" type="text" class="form-control" id="desc4_3"
+                                        placeholder="Digite o titulo da navegação três"
+                                        value="{{cardHome.dataValues.desc4_3}}" required>
+                                </div>
+                            </div>
+                            <p class="mt-4">
+                                <span class="text-danger">* </span>Todos os campos são obrigatórios
+                            </p>
+                            <button type="submit" class="btn btn-warning">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
