@@ -30,47 +30,80 @@
         <!-- horizontal form -->
         <!-- ============================================================== -->
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <form action="/aperitivos/cadastrar" method="post">
                 <div class="card">
-                    <h5 class="card-header">Cadastro do Produto Aperitivo</h5>
+                    <h5 class="card-header">{{contato.dataValues.title}}</h5>
                     <div class="card-body">
-                        <form id="form" data-parsley-validate="" novalidate="">
-                            <div class="form-group">
-                                <label for="nomeAperitivo">Nome do Aperitivo</label>
-                                <input type="text" name="nomeAperitivo" id="nomeAperitivo" class="form-control"
-                                    placeholder="Digite o nome do Aperitivo">
+                        <div class="contact-box">
+                            <div class="container">
+                                <form action="/contato/contatopost" method="post">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="heading-title text-center">
+                                                <h2>{{contato.dataValues.subtitle}}</h2>
+                                                <p>{{contato.dataValues.desc}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <form id="contactForm">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id="name"
+                                                                name="name"
+                                                                placeholder="{{contato.dataValues.placeholder1}}"
+                                                                required
+                                                                data-error="Por favor:  {{contato.dataValues.placeholder1}}">
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input type="text"
+                                                                placeholder="{{contato.dataValues.placeholder2}}"
+                                                                id="email" class="form-control" name="email" required
+                                                                data-error="Por favor:  {{contato.dataValues.placeholder2}}">
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <select class="custom-select d-block form-control" id="nota"
+                                                                name="nota" required data-error="Please Select Person">
+                                                                <option disabled selected>Dê uma nota</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                            </select>
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" id="message" name="message"
+                                                                placeholder="{{contato.dataValues.placeholder4}}"
+                                                                rows="4"
+                                                                data-error="Por favor: {{contato.datavalues.placeholder4}}"
+                                                                required></textarea>
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                        <div class="submit-button text-center">
+                                                            <button class="btn btn-common" id="submit"
+                                                                type="submit">{{contato.dataValues.title_btn}}</button>
+                                                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label for="descAperitivo">Descrição do Aperitivo</label>
-                                <textarea name="descAperitivo" id="descAperitivo" cols="30" rows="10"
-                                    class="form-control" placeholder="Digite a descrição deste aperitivo"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="valorAperitivo">Valor Aperitivo</label>
-                                <input type="text" name="valorAperitivo" id="valorAperitivo" class="form-control"
-                                    placeholder="Digite o valor do Aperitivo">
-                            </div>
-                            <div class="form-group">
-                                <label for="gastoAperitivo">Valor Gasto Aperitivo</label>
-                                <input type="text" name="gastoAperitivo" id="gastoAperitivo" class="form-control"
-                                    placeholder="Digite o valor gasto do Aperitivo">
-                            </div>
-                            <hr>
-                            <div class="row pt-2 pt-sm-5 mt-1">
-                                <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                    <label class="be-checkbox custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"><span
-                                            class="custom-control-label">Remember me</span>
-                                    </label>
-                                </div>
-                                <div class="col-sm-6 pl-0">
-                                    <p class="text-right">
-                                        <button type="submit" class="btn btn-space btn-primary">Submit</button>
-                                        <button class="btn btn-space btn-secondary">Cancel</button>
-                                    </p>
-                                </div>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
         </div>

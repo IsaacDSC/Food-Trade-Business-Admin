@@ -67,7 +67,7 @@ router.get('/vis-menuBurger', (req, res) => {
 
 router.get('/vis-cardapiohome', (req, res) => {
     CardapioHome.findOne().then((cardHome) => {
-        res.render('vis-admin/vis-cardapiohome')
+        res.render('vis-admin/vis-cardapiohome', { cardHome: cardHome })
     }).catch((err) => {
         res.send('Error' + err)
     })

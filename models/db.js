@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('ftb', 'dev', 'secret123', {
+const sequelize = new Sequelize('ftb', 'dev', 'secret', {
     host: 'localhost',
     dialect: 'mysql'
 })
