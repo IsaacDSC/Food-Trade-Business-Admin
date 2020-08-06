@@ -26,14 +26,11 @@ const MenuPizza = require('../models/MenuPizza')
     //models login admin
 const SuperUser = require('../models/SuperUser')
 
-<<<<<<< HEAD
 
 
-router.get('/', (req, res) => {
-=======
+
 //rota responsável por facilitar o carregamento de dados para o db e carregar o layout para a aplicações
 router.get('/', auth, (req, res) => {
->>>>>>> 7d59ac601c87415abd97abfe19519d10e2159307
     res.render('reset/reset', { layout: 'dashboard.handlebars' })
 })
 
@@ -68,12 +65,8 @@ router.get('/headernav', auth, (req, res) => {
     })
 })
 
-<<<<<<< HEAD
-router.get('/homeslideshow', (req, res) => {
-=======
 //rota responsavel por carregar layout slideshow da pagina home 
 router.get('/homeslideshow', auth, (req, res) => {
->>>>>>> 7d59ac601c87415abd97abfe19519d10e2159307
     PagHome_slideshow.create({
         img1: 'images/slider-01.jpg',
         title1_1: 'Bem vindo ao ',
@@ -105,12 +98,8 @@ router.get('/homeslideshow', auth, (req, res) => {
     })
 })
 
-<<<<<<< HEAD
-router.get('/footer', (req, res) => {
-=======
 //rota responsável pelo carregamento do layout da parte footer rodapé do site 
 router.get('/footer', auth, (req, res) => {
->>>>>>> 7d59ac601c87415abd97abfe19519d10e2159307
     Footer_models.create({
         title1: 'SOBRE NÓS',
         describe1: 'Integer cursus scelerisque ipsum id efficitur. Donec a dui fringilla, gravida lorem ac, semper magna. Aenean rhoncus ac lectus a interdum. Vivamus semper posuere dui, at ornare turpis ultrices sit amet. Nulla cursus lorem ut nisi porta, ac eleifend arcu ultrices.',
@@ -156,12 +145,8 @@ router.get('/footer', auth, (req, res) => {
     })
 })
 
-<<<<<<< HEAD
-router.get('/history', (req, res) => {
-=======
 //rota responsavel pelo carregamento do layout da pagina home área litlle history
 router.get('/history', auth, (req, res) => {
->>>>>>> 7d59ac601c87415abd97abfe19519d10e2159307
         Hystoryhome_models.create({
             title1: 'Bem vindo ao',
             title2: 'Site Burguer',
@@ -232,12 +217,8 @@ router.get('/cardapiohome', (req, res) => {
     })
 })
 
-<<<<<<< HEAD
-router.get('/menuburger', (req, res) => {
-=======
 //rota responsavel por carregar menuburger, layout client para poder testar a aplicação
 router.get('/menuburger', auth, (req, res) => {
->>>>>>> 7d59ac601c87415abd97abfe19519d10e2159307
     MenuBurger.create({
         title: 'BURGUER RESTAURANTE',
         desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
@@ -309,12 +290,8 @@ router.get('/menuburger', auth, (req, res) => {
     })
 })
 
-<<<<<<< HEAD
-router.get('/menubebidas', (req, res) => {
-=======
 //rota responsavel por carregar menubebidas, layout client para poder testar a aplicação
 router.get('/menubebidas', auth, (req, res) => {
->>>>>>> 7d59ac601c87415abd97abfe19519d10e2159307
     MenuBebidas.create({
         title: 'BEBIDAS',
         desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
@@ -352,12 +329,8 @@ router.get('/menubebidas', auth, (req, res) => {
     })
 })
 
-<<<<<<< HEAD
-router.get('/menupizzas', (req, res) => {
-=======
 //rota responsavel por carregar menupizza, layout client para poder testar a aplicação
 router.get('/menupizzas', auth, (req, res) => {
->>>>>>> 7d59ac601c87415abd97abfe19519d10e2159307
     MenuPizza.create({
         title: 'Best Pizzas',
         desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
@@ -391,12 +364,8 @@ router.get('/menupizzas', auth, (req, res) => {
     })
 })
 
-<<<<<<< HEAD
-router.get('/contato', (req, res) => {
-=======
 //rota responsavel por adionar layout da pagina de contato do servidor client
 router.get('/contato', auth, (req, res) => {
->>>>>>> 7d59ac601c87415abd97abfe19519d10e2159307
     Contato.create({
         title: 'Seja Bem Vindo a Pagina de Cotato!',
         subtitle: 'Contato',
@@ -466,4 +435,4 @@ router.get('/userClients', (req, res) => {
 })
 
 
-module.exports = router
+module.exports = router;
