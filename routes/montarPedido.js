@@ -1,12 +1,13 @@
 const express = require('express')
 const router = express.Router()
 const Menu = require('../models/Menu')
+const { auth } = require('../helpers/Authenticated')
 
-router.get('/', (req, res) => {
+router.get('/', auth, (req, res) => {
     res.render('montarPedido/montarPedido')
 })
 
-router.post('/', (req, res) => {
+router.post('/', auth, (req, res) => {
     Menu.findAll({ where: { class: req.body.class } }).then((menu) => {
             res.render('montarPedido/montarPedido', { menu: menu })
         })
@@ -41,6 +42,13 @@ router.post('/', (req, res) => {
                 })
             } */
 })
+
+
+router.get('/', auth, (req, res) => {
+
+})
+
+
 
 
 
