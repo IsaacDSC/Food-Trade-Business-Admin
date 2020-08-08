@@ -60,129 +60,103 @@
         <!-- ============================================================== -->
         <!-- end pageheader -->
         <!-- ============================================================== -->
-
-        <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-                <form action="/aperitivos/cadastrar" method="post">
-                    <div class="card">
-                        <h5 class="card-header">Clientes</h5>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="form-group col-12">
-                                    <label for="">Pesquisar Usuario</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Numero Telefone</option>
-                                        <option value="">Nome</option>
-                                        <option value="">Rua</option>
-                                    </select>
-                                    <input type="text" class="form-control mt-3">
-                                </div>
-                                <div class="form-group col-12">
-                                    <button class="btn btn-success">Pesquisar</button>
-                                </div>
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Clientes</h5>
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <label for="">Pesquisar Usuario</label>
+                            <select name="" id="" class="form-control">
+                                <option value="">Numero Telefone</option>
+                                <option value="">Nome</option>
+                                <option value="">Rua</option>
+                            </select>
+                            <input type="text" class="form-control mt-3">
+                        </div>
+                        <div class="form-group col-12">
+                            <button class="btn btn-success">Pesquisar</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <h4 class="card-header col-12">Endereço Cliente</h4>
+                        <div class="form-group col-12 mt-2">
+                            <label for="">Bairro</label>
+                            <input type="text" class="form-control col-12" placeholder="Digite o Bairro">
+                        </div>
+                        <div class="form-group col-12 mt-2">
+                            <label for="">Rua</label>
+                            <input type="text" class="form-control col-12" placeholder="Digite o nome da Rua">
+                        </div>
+                        <div class="form-group col-12 mt-2">
+                            <label for="">Numero Residência</label>
+                            <input type="text" class="form-control col-12" placeholder="Digite o Numero da Resiência">
+                        </div>
+                        <div class="row mt-2 ml-2">
+                            <div class="form-group col-6">
+                                <button class="btn btn-outline-primary col-12">Confirma</button>
                             </div>
-                            <hr>
-                            <div class="row col-12">
-                                <h4 class="card-header col-12">Endereço Cliente</h4>
-                                <div class="form-group col-12 mt-2">
-                                    <label for="">Bairro</label>
-                                    <input type="text" class="form-control col-12" placeholder="Digite o Bairro">
-                                </div>
-                                <div class="form-group col-12 mt-2">
-                                    <label for="">Rua</label>
-                                    <input type="text" class="form-control col-12" placeholder="Digite o nome da Rua">
-                                </div>
-                                <div class="form-group col-12 mt-2">
-                                    <label for="">Numero Residência</label>
-                                    <input type="text" class="form-control col-12"
-                                        placeholder="Digite o Numero da Resiência">
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="form-group col-6">
-                                        <button class="btn btn-outline-primary col-12">Confirma</button>
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <button class="btn btn-outline-danger" type="reset">Mudar Endereço</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row col-12">
-                                <h4 class="card-header col-12">Cadastrar Cliente</h4>
-                                <div class="form-group col-12 mt-2">
-                                    <label for="">Nome</label>
-                                    <input type="text" class="form-control col-12"
-                                        placeholder="Digite o nome do cliente">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row pt-2 pt-sm-5 mt-1">
-                                <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                    <label class="be-checkbox custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"><span
-                                            class="custom-control-label">Remember me</span>
-                                    </label>
-                                </div>
-                                <div class="col-sm-6 pl-0">
-                                    <p class="text-right">
-                                        <button type="submit" class="btn btn-space btn-primary">Submit</button>
-                                        <button class="btn btn-space btn-secondary">Cancel</button>
-                                    </p>
-                                </div>
+                            <div class="form-group col-6">
+                                <button class="btn btn-outline-danger" type="reset">Outro End.</button>
                             </div>
                         </div>
                     </div>
-                </form>
+
+                    <!-- ============================================================== -->
+                    <!-- end pag a esquerda -->
+                    <!-- ============================================================== -->
+                    <hr>
+                    <!-- ============================================================== -->
+                    <!-- COMEÇO Pagina no centro cardapio(MENU) -->
+                    <!-- ============================================================== -->
+                    <div class="row col-12">
+                        <h4 class="card-header col-12">Cadastrar Cliente</h4>
+                        <div class="form-group col-12 mt-2">
+                            <label for="">Nome</label>
+                            <input type="text" class="form-control col-12" placeholder="Digite o nome do cliente">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="form-group">
+                            <button class="btn btn-outline-success">Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <!-- ============================================================== -->
-            <!-- end pag a esquerda -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- COMEÇO Pagina no centro cardapio(MENU) -->
-            <!-- ============================================================== -->
-
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-                <form action="/aperitivos/cadastrar" method="post">
-                    <div class="card">
-                        <h5 class="card-header">Aperitivos</h5>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="form-group">
-                                    <p>Campo de saida da pesquisa Class ou tipos aperitivos</p>
-                                    <br>
-                                    {{#each menu}}
-                                    <a href="" class="mt-1">
-                                        <div class="container" class="col-10" style="border: 1px solid rgba(128, 128, 128, 0.678);">
-                                            <div class="row">
-                                                <div class="form-group col-7">
-                                                    <h5 class="">Nome: <small>{{dataValues.name}}</small>                                                    
-                                                </div>
-                                                <div class="form-group col-5">
-                                                    <h5 class="">Valor: <small>R${{dataValues.valorVenda}}</small></h5>
-                                                </div>
-                                                <div class="form-group col-12">
-                                                    <h5 class="">Descrição: <small>{{dataValues.desc}}</small></h5>
-                                                </div>
-                                            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Aperitivos</h5>
+                    <div class="row">
+                        <div class="form-group">
+                            <p>Pesquise primeiro o Aperitivo desejado logo acima</p>
+                            <br>
+                            {{#each menu}}
+                            <a href="" class="mt-1">
+                                <div class="container" class="col-10"
+                                    style="border: 1px solid rgba(128, 128, 128, 0.678);">
+                                    <div class="row">
+                                        <div class="form-group col-7">
+                                            <h5 class="">Nome: <small>{{dataValues.name}}</small>
                                         </div>
-                                    </a>
-
-                                    {{/each}}
-                                    {{!-- {{#if Burger}}
-                                    {{#each Burger}}
-                                        <h1>{{dataValues.name}}</h1>
-                                        <h2>{{dataValues.desc}}</h2>
-                                    {{/each}}
-                                    {{/if}} --}}
+                                        <div class="form-group col-5">
+                                            <h5 class="">Valor: <small>R${{dataValues.valorVenda}}</small></h5>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <h5 class="">Descrição: <small>{{dataValues.desc}}</small></h5>
+                                        </div>
+                                    </div>
                                 </div>
+                            </a>
 
-                            </div>
+                            {{/each}}
+
                         </div>
-                    </div>
-                </form>
-            </div>
 
+                    </div>
+                </div>
+            </div>
 
             <!-- ============================================================== -->
             <!-- FIM Pagina no centro cardapio(MENU) -->
@@ -190,12 +164,11 @@
             <!-- ============================================================== -->
             <!-- começo pag direita carrinho de compras -->
             <!-- ============================================================== -->
-            <div class="form-group col-4">
-                <div class="card">
-                    <h5 class="card-header">Carrinho de Compras</h5>
-                    <div class="card-body">
 
-                    </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Carrinho de Compras</h5>
                     <hr>
                     <div class="form-group">
                         <label for="" class="ml-3">Entrega</label>
@@ -221,13 +194,13 @@
                     <br>
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- fim pag direita carrinho de compras -->
-            <!-- ============================================================== -->
         </div>
 
-
+        <!-- ============================================================== -->
+        <!-- fim pag direita carrinho de compras -->
+        <!-- ============================================================== -->
     </div>
+</div>
 </div>
 <!-- ============================================================== -->
 <!-- end horizontal form -->

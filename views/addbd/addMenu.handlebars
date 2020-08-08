@@ -30,11 +30,10 @@
         <!-- horizontal form -->
         <!-- ============================================================== -->
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <form action="/aperitivos/cadastrar" method="post">
-                <div class="card">
-                    <h5 class="card-header">Cadastro do Produto Aperitivo</h5>
-                    <div class="card-body">
-                        <form action="/addbd/menu" method="post">
+            <div class="card">
+                <h5 class="card-header">Cadastro do Produto Aperitivo</h5>
+                <div class="card-body">
+                    <form action="/addbd/menu" method="post">
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <label><span class="text-danger">* </span>Classe de Menu</label>
@@ -59,70 +58,32 @@
                                 <label><span class="text-danger">* </span>Descrição</label>
                                 <textarea name="desc" class="form-control" id="desc" cols="30" rows="10" required
                                     placeholder="Digite a descrição principal"></textarea>
-                            </div>                              
-                        </div>  
+                            </div>
+                        </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label><span class="text-danger">* </span>Custo</label>
-                                <input name="valorGasto" type="text" class="form-control" id="tabela1" placeholder="Digite o valor gasto para produzir este produto" required>
+                                <input name="valorGasto" type="text" class="form-control" id="tabela1"
+                                    placeholder="Digite o valor gasto para produzir este produto" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label><span class="text-danger">* </span>Valor para Venda</label>
                                 <input name="valorVenda" type="text" class="form-control" id="title"
                                     placeholder="Digite o Nome do Aperitivo a ser Cadastrado" required>
                             </div>
-                        </div>                     
+                        </div>
 
                         <p class="mt-4">
                             <span class="text-danger">* </span>Todos os campos são obrigatórios
                         </p>
                         <button type="submit" class="btn btn-warning">Salvar</button>
                     </form>
-                    </div>
                 </div>
+            </div>
         </div>
         <!-- ============================================================== -->
         <!-- end horizontal form -->
         <!-- ============================================================== -->
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-            <form action="/aperitivos/cadastrar_opc" method="post">
-                <div class="card">
-                    <h5 class="card-header">Opções Aperitivos</h5>
-                    <div class="card-body">
-                        <form id="form" data-parsley-validate="" novalidate="">
-                            <div class="form-group">
-                                <label for="nome">Nome da opção Aperitivo</label>
-                                <input type="text" name="nome" id="nome" class="form-control"
-                                    placeholder="Digite o nome da opção do Aperitivo">
-                            </div>
-                            <div class="form-group">
-                                <label for="valor">Valor da Opção Aperitivo</label>
-                                <input type="text" name="valor" id="valor" class="form-control"
-                                    placeholder="Digite o valor da opção do Aperitivo">
-                            </div>
-                            <div class="form-group">
-                                <label for="gasto">Valor da Opção Gasto Aperitivo</label>
-                                <input type="text" name="gasto" id="gasto" class="form-control"
-                                    placeholder="Digite o valor gasto da opção do Aperitivo">
-                            </div>
-                            <hr>
-                            <div class="row pt-2 pt-sm-5 mt-1">
-                                <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                    <label class="be-checkbox custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input"><span
-                                            class="custom-control-label">Remember me</span>
-                                    </label>
-                                </div>
-                                <div class="col-sm-6 pl-0">
-                                    <p class="text-right">
-                                        <button type="submit" class="btn btn-space btn-primary">Submit</button>
-                                        <button class="btn btn-space btn-secondary">Cancel</button>
-                                    </p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-        </div>
+
     </div>
 </div>

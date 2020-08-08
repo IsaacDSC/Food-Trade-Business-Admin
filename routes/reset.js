@@ -15,7 +15,7 @@ const Hystoryhome_models = require('../models/HistoryHome_models')
 const CardapioHome_models = require('../models/CardapiosHome_models')
     //adionando models da pagina contato
 const Contato = require('../models/Contato')
-
+const Usuarios = require('../models/Usuarios')
 const Menu = require('../models/Menu')
 
 

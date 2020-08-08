@@ -78,20 +78,9 @@ router.get('/vis-cardapiohome', (req, res) => {
 })
 
 router.get('/cardapios', (req, res) => {
-    Menu.findAll().then((menu) => {
-        Menu.findAll({ where: { class: 'Hamburgue' } }).then((Burger) => {
-            if (Burger == null || Burger == undefined) {
-                res.send('Table Burger null or undefined')
-            } else {
-                res.render('vis-admin/vis-cardapios', { menu: menu, Burger: Burger })
-            }
-        }).catch((err) => {
-            res.send(err)
-        })
-    }).catch((err) => {
-        res.send(err)
-    })
+    res.render('vis-admin/vis-cardapios')
 })
+
 router.post('/cardapios', (req, res) => {
     if (req.body.class == 'Hamburgue') {
         Menu.findAll({ where: { class: 'Hamburgue' } }).then((Burger) => {

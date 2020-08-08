@@ -50,8 +50,8 @@
                                             <option value="Promoces">Promoções</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-4">
-                                        <button class="btn btn-outline-success" style="width: 100%;">Procurar</button>
+                                    <div class="form-group col-4 mt-4">
+                                        <button class="btn btn-outline-success mr-3">Procurar</button>
                                     </div>
                                 </div>
                             </form>
@@ -69,13 +69,16 @@
                                 <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
                                 <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
                                 <div class="row">
-                                    <div class="form-group col-12">
-                                        <button type="submit" class="btn btn-outline-success">Editar</button>
+                                    <div class="form-group col-6">
+                                        <button type="submit" class="btn btn-outline-success col-12">Editar</button>
+                                    </div>
                             </form>
-                            <form action="/addbd/delete-cardapio" method="post">
-                                <input type="hidden" name="id" value="{{dataValues.id}}">
-                                <button type="submit" class="btn btn-outline-danger">Deletar</button>
-                            </form>
+                            <div class="form-group col-6">
+                                <form action="/addbd/delete-cardapio" method="post">
+                                    <input type="hidden" name="id" value="{{dataValues.id}}">
+                                    <button type="submit" class="btn btn-outline-danger col-12">Deletar</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <hr>
@@ -94,12 +97,18 @@
                         </h4>
                         <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
                         <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
-                        <button type="submit" class="btn btn-outline-success">Editar</button>
-                    </form>
-                    <form action="/addbd/delete-cardapio" method="post">
-                        <input type="hidden" name="id" value="{{dataValues.id}}">
-                        <button type="submit" class="btn btn-outline-danger">Deletar</button>
-                    </form>
+                        <div class="row">
+                                    <div class="form-group col-6">
+                                        <button type="submit" class="btn btn-outline-success col-12">Editar</button>
+                                    </div>
+                            </form>
+                            <div class="form-group col-6">
+                                <form action="/addbd/delete-cardapio" method="post">
+                                    <input type="hidden" name="id" value="{{dataValues.id}}">
+                                    <button type="submit" class="btn btn-outline-danger col-12">Deletar</button>
+                                </form>
+                            </div>
+                        </div>
                     <hr>
                     {{/each}}
                     {{/if}}
@@ -115,12 +124,18 @@
                         </h4>
                         <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
                         <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
-                        <button type="submit" class="btn btn-outline-success">Editar</button>
-                    </form>
-                    <form action="/addbd/delete-cardapio" method="post">
-                        <input type="hidden" name="id" value="{{dataValues.id}}">
-                        <button type="submit" class="btn btn-outline-danger">Deletar</button>
-                    </form>
+                        <div class="row">
+                                    <div class="form-group col-6">
+                                        <button type="submit" class="btn btn-outline-success col-12">Editar</button>
+                                    </div>
+                            </form>
+                            <div class="form-group col-6">
+                                <form action="/addbd/delete-cardapio" method="post">
+                                    <input type="hidden" name="id" value="{{dataValues.id}}">
+                                    <button type="submit" class="btn btn-outline-danger col-12">Deletar</button>
+                                </form>
+                            </div>
+                        </div>
                     <hr>
                     {{/each}}
                     {{/if}}
@@ -135,12 +150,18 @@
                         </h4>
                         <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
                         <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
-                        <button type="submit" class="btn btn-outline-success">Editar</button>
-                    </form>
-                    <form action="/addbd/delete-cardapio" method="post">
-                        <form action="/admin/edit-cardapio" method="post">
-                            <button type="submit" class="btn btn-outline-danger">Deletar</button>
-                        </form>
+                        <div class="row">
+                                    <div class="form-group col-6">
+                                        <button type="submit" class="btn btn-outline-success col-12">Editar</button>
+                                    </div>
+                            </form>
+                            <div class="form-group col-6">
+                                <form action="/addbd/delete-cardapio" method="post">
+                                    <input type="hidden" name="id" value="{{dataValues.id}}">
+                                    <button type="submit" class="btn btn-outline-danger col-12">Deletar</button>
+                                </form>
+                            </div>
+                        </div>
                         <hr>
                         {{/each}}
                         {{/if}}
@@ -156,12 +177,18 @@
                             </h4>
                             <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
                             <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
-                            <button type="submit" class="btn btn-outline-success">Editar</button>
-                        </form>
-                        <form action="/addbd/delete-cardapio" method="post">
-                            <input type="hidden" name="id" value="{{dataValues.id}}">
-                            <button type="submit" class="btn btn-outline-danger">Deletar</button>
-                        </form>
+                            <div class="row">
+                                    <div class="form-group col-6">
+                                        <button type="submit" class="btn btn-outline-success col-12">Editar</button>
+                                    </div>
+                            </form>
+                            <div class="form-group col-6">
+                                <form action="/addbd/delete-cardapio" method="post">
+                                    <input type="hidden" name="id" value="{{dataValues.id}}">
+                                    <button type="submit" class="btn btn-outline-danger col-12">Deletar</button>
+                                </form>
+                            </div>
+                        </div>
                         <hr>
                         {{/each}}
                         {{/if}}
@@ -177,12 +204,18 @@
                             </h4>
                             <h4><strong>Valor Venda: </strong> <small>R$ {{dataValues.valorVenda}}</small></h4>
                             <h4><strong>Lucro: </strong> <small>R$ {{dataValues.lucro}}</small></h4>
-                            <button type="submit" class="btn btn-outline-success">Editar</button>
-                        </form>
-                        <form action="/addbd/delete-cardapio" method="post">
-                            <input type="hidden" name="id" value="{{dataValues.id}}">
-                            <button type="submit" class="btn btn-outline-danger">Deletar</button>
-                        </form>
+                            <div class="row">
+                                    <div class="form-group col-6">
+                                        <button type="submit" class="btn btn-outline-success col-12">Editar</button>
+                                    </div>
+                            </form>
+                            <div class="form-group col-6">
+                                <form action="/addbd/delete-cardapio" method="post">
+                                    <input type="hidden" name="id" value="{{dataValues.id}}">
+                                    <button type="submit" class="btn btn-outline-danger col-12">Deletar</button>
+                                </form>
+                            </div>
+                        </div>
                         <hr>
                         {{/each}}
                         {{/if}}
