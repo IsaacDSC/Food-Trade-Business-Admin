@@ -23,6 +23,8 @@ const uploafiles = require('./routes/uploadFiles')
 const reset = require('./routes/reset')
     //route responsável por fazer montar pedido no dashboard
 const montarPedido = require('./routes/montarPedido')
+    //route para configurar os dados da primeira vez
+const config = require('./routes/tecnico')
 
 
 //configurando body-parser
@@ -59,6 +61,7 @@ app.use('/addbd', addBd)
 app.use('/uploadfiles', uploafiles)
 app.use('/reset', reset)
 app.use('/montarPedido', montarPedido)
+app.use('/', config)
 
 const PORT = 3001
 app.listen(PORT, () => {
