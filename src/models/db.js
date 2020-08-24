@@ -3,7 +3,6 @@ const crypto = require('crypto')
 const getCrypto = require('@Crypto')
 const JSON = require('@Config_Json')
 
-JSON.readFile()
 
 const decprypt = value => {
     //console.log(value.split(':'))
@@ -18,7 +17,7 @@ const decprypt = value => {
 const contents = JSON.readFile()
 for (content of contents) {
     //const decprypt = decprypt(content.DataBase)
-    console.log(content.DataBase)
+    //console.log(content.DataBase)
     var database = content.DataBase
     var user = content.User
     var password = content.PassWord
