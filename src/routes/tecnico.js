@@ -1,8 +1,9 @@
+require('module-alias/register');
 const express = require('express')
 const router = express.Router()
 const crypto = require('crypto')
-const getCrypto = require('../config/Crypt and Decrypt/Crypto')
-const JSON = require('../config/JSON/Json')
+const getCrypto = require('@Crypto')
+const JSON = require('@Config_Json')
 
 
 ///objetivo apresentar uma interfacil amigavel 

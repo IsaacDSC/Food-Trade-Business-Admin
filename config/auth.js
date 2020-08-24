@@ -3,8 +3,8 @@ const LocalStrategy = require('passport-local').Strategy
 const bcrypt = require('bcryptjs')
 
 //models
-require('../models/SuperUser')
-const SuperUser = require('../models/SuperUser')
+require('../src/models/SuperUser')
+const SuperUser = require('../src/models/SuperUser')
 
 module.exports = function(passport) {
     passport.use(new LocalStrategy({

@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "es2017",
+      "allowSyntheticDefaultImports": false,
+      "baseUrl": "./",
+      "paths": {
+        "@/*": ["src/*"],
+        "@routes/*": ["src/routes/*"],
+        "@config/*": ["config/*"],
+        "@Crypto/*": ["config/crytpto/Crypto/*"],
+        "@Config_Json/*": ["config/JSON/Json/*"],
+        "@helper/*": ["src/helper/*"],
+        "@model/*": ["src/model/*"]
+      }
+    },
+    "exclude": ["node_modules", "dist"]
+} 
