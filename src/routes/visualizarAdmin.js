@@ -3,15 +3,15 @@ const router = express.Router()
 const { auth } = require('@helper/auth')
 
 //adionando models para carregar a pag visualizar
-const HeaderNav = require('.@models/HeaderNav')
-const History = require('.@models/HistoryHome_models')
-const Footer = require('.@models/Footer_models')
-const Slideshow = require('.@models/PagHome_Slideshow')
-const Contato = require('.@models/Contato')
-const Menu = require('.@models/Menu')
+const HeaderNav = require('@models/HeaderNav')
+const History = require('@models/HistoryHome_models')
+const Footer = require('@models/Footer_models')
+const Slideshow = require('@models/PagHome_Slideshow')
+const Contato = require('@models/Contato')
+const Menu = require('@models/Menu')
     //adionando models para carregar pagina de cardápios
-const CardapioHome = require('.@models/CardapiosHome_models')
-const MenuBurger = require('.@models/MenuBurger')
+const CardapioHome = require('@models/CardapiosHome_models')
+const MenuBurger = require('@models/MenuBurger')
 
 router.get('/', (req, res) => {
     res.render('vis-admin/vis')
