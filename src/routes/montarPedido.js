@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Menu = require('../models/Menu')
-const { auth } = require('../helpers/Authenticated')
+const { auth } = require('@helper/auth')
 const Client = require('../models/Client')
 const DataClients = []
 

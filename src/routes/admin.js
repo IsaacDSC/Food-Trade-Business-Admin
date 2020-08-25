@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const fs = require('fs')
-const { auth } = require('../helpers/Authenticated')
+const { auth } = require('@helper/auth')
 
 
 const folder = 'public/images/'

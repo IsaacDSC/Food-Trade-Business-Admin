@@ -3,7 +3,7 @@ const router = express.Router()
 const multer = require('multer')
 const fs = require('fs')
 const folder = 'public/images/'
-const { auth } = require('../helpers/Authenticated')
+const { auth } = require('@helper/auth')
 
 const { promisify } = require('util');
 const unlink = promisify(fs.unlink);

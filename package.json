@@ -37,6 +37,8 @@
         "@config": "config",
         "@routes": "src/routes",
         "@Crypto": "config/crytpto/Crypto",
-        "@Config_Json": "config/JSON/Json"
+        "@Config_Json": "config/JSON/Json",
+        "@helper": "src/helpers",
+        "@model": "src/model"
     }
 }

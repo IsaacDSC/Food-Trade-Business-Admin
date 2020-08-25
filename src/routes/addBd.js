@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { auth } = require('../helpers/Authenticated')
+const { auth } = require('@helper/auth')
     //configuração para enviar email caso haja erro
 
 //adionando models com info sobre errors para envio futuro de email

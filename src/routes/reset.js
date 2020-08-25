@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const bcryptjs = require('bcryptjs')
 
-const { auth } = require('../helpers/Authenticated')
+const { auth } = require('@helper/auth')
     //add models HeaderNav
 const HeaderNav = require('../models/HeaderNav')
     //add models PagHome_slideshow

@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { auth } = require('../helpers/Authenticated')
+const { auth } = require('@helper/auth')
 
 //adionando models para carregar a pag visualizar
 const HeaderNav = require('../models/HeaderNav')
