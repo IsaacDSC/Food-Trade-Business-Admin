@@ -35,7 +35,7 @@ app.use(bodyParser.json())
     //configurando handlebars
 app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
-app.set("views", path.join(__dirname, "/views/"))
+app.set("views", path.join(__dirname, "/views/")) //resolvendo problema, direcionando views para dentro de src
     //adionando pasta public
 app.use(express.static(path.join(__dirname, 'public')))
     //configurando a sessao

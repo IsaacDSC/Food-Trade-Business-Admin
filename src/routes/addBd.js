@@ -7,15 +7,15 @@ const { auth } = require('@helper/auth')
 const Erros = require('../models/Erros')
 
 //adionando models
-const HeaderNav = require('../models/HeaderNav')
-const pagHome_slideshow = require('../models/PagHome_Slideshow')
-const History = require('../models/HistoryHome_models')
-const Footer = require('../models/Footer_models')
-const Contato = require('../models/Contato')
-const Menu = require('../models/Menu')
+const HeaderNav = require('@models/HeaderNav')
+const pagHome_slideshow = require('@models/PagHome_Slideshow')
+const History = require('@models/HistoryHome_models')
+const Footer = require('@models/Footer_models')
+const Contato = require('@models/Contato')
+const Menu = require('@models/Menu')
     //adionando models menu
-const CardapioHome = require('../models/CardapiosHome_models')
-const MenuBurger = require('../models/MenuBurger')
+const CardapioHome = require('@models/CardapiosHome_models')
+const MenuBurger = require('@models/MenuBurger')
 
 
 

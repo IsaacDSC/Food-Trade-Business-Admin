@@ -4,27 +4,27 @@ const bcryptjs = require('bcryptjs')
 
 const { auth } = require('@helper/auth')
     //add models HeaderNav
-const HeaderNav = require('../models/HeaderNav')
+const HeaderNav = require('@models/HeaderNav')
     //add models PagHome_slideshow
-const PagHome_slideshow = require('../models/PagHome_Slideshow')
+const PagHome_slideshow = require('@models/PagHome_Slideshow')
     // add models Footer
-const Footer_models = require('../models/Footer_models')
+const Footer_models = require('@models/Footer_models')
     // add models HistoryHome
-const Hystoryhome_models = require('../models/HistoryHome_models')
+const Hystoryhome_models = require('@models/HistoryHome_models')
     //adionando models do cardapio da pagina home
-const CardapioHome_models = require('../models/CardapiosHome_models')
+const CardapioHome_models = require('@models/CardapiosHome_models')
     //adionando models da pagina contato
-const Contato = require('../models/Contato')
-const Usuarios = require('../models/Usuarios')
-const Menu = require('../models/Menu')
+const Contato = require('@models/Contato')
+const Usuarios = require('@models/Usuarios')
+const Menu = require('@models/Menu')
 
 
 //adionando Models Menu
-const MenuBebidas = require('../models/MenuBebidas')
-const MenuBurger = require('../models/MenuBurger')
-const MenuPizza = require('../models/MenuPizza')
+const MenuBebidas = require('@models/MenuBebidas')
+const MenuBurger = require('@models/MenuBurger')
+const MenuPizza = require('@models/MenuPizza')
     //models login admin
-const SuperUser = require('../models/SuperUser')
+const SuperUser = require('@models/SuperUser')
 
 
 

@@ -6,17 +6,17 @@ const { auth } = require('@helper/auth')
 
 const folder = 'public/images/'
     //adionando models para carregamento do db nas paginas
-const HeaderNav = require('../models/HeaderNav')
-const PagHome_slideshow = require('../models/PagHome_Slideshow')
-const HistoryHome = require('../models/HistoryHome_models')
-const CardapioHome = require('../models/CardapiosHome_models')
-const Footer = require('../models/Footer_models')
-const Contato = require('../models/Contato')
+const HeaderNav = require('@models/HeaderNav')
+const PagHome_slideshow = require('@models/PagHome_Slideshow')
+const HistoryHome = require('@models/HistoryHome_models')
+const CardapioHome = require('@models/CardapiosHome_models')
+const Footer = require('@models/Footer_models')
+const Contato = require('@models/Contato')
 
 //adionando models menus cardápios
-const MenuBurger = require('../models/MenuBurger')
-const menuBebidas = require('../models/MenuBebidas')
-const Menu = require('../models/Menu')
+const MenuBurger = require('@models/MenuBurger')
+const menuBebidas = require('@models/MenuBebidas')
+const Menu = require('@models/Menu')
 
 
 router.get('/', auth, (req, res) => {
