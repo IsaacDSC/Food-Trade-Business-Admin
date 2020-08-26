@@ -19,7 +19,8 @@ const Usuarios = require('@models/Usuarios')
 const Menu = require('@models/Menu')
 
 
-//adionando Models Menu
+//adionando Models LAYOUT MENU
+const TemplateMenu = require('@/models/TemplatesMenu')
 const MenuBebidas = require('@models/MenuBebidas')
 const MenuBurger = require('@models/MenuBurger')
 const MenuPizza = require('@models/MenuPizza')
@@ -219,70 +220,10 @@ router.get('/cardapiohome', (req, res) => {
 
 //rota responsavel por carregar menuburger, layout client para poder testar a aplicação
 router.get('/menuburger', (req, res) => {
-    MenuBurger.create({
+    TemplateMenu.create({
+        class: 'Hamburgue',
         title: 'BURGUER RESTAURANTE',
         desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
-        tabela1: 'Item',
-        tabela2: 'Valor',
-        tabela3: 'Alteração',
-        title1: 'X-Tudo',
-        title2: 'X-salada-Bacon',
-        title3: 'X-Bacon',
-        title4: 'X-Salada',
-        title5: 'X-Burger',
-        title6: 'X-Egg-Bacon',
-        title7: 'X-Egg-Burger',
-        title8: 'X-Parmegiana',
-        title9: 'X-Parmegiana',
-        title10: 'X-Frango-Catupiry',
-        title11: 'Frango Tudo',
-        title12: 'Hamburger',
-        title13: 'X-Tudo Duplo',
-        title14: 'X-Alguma-Coisa',
-        title15: 'X-Alguma-Coisa',
-        desc1: 'Pão, carne bovina , presunto, maionese, queijo prato, alface, tomate, ovo, bacon, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
-        desc2: 'Pão, carne bovina , presunto, maionese, queijo prato, alface, tomate, bacon, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
-        desc3: 'Pão, carne bovina , presunto, maionese, queijo prato, bacon, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
-        desc4: 'Pão, carne bovina , presunto, maionese, queijo prato, alface, tomate, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
-        desc5: 'Pão, carne bovina , presunto, maionese, queijo prato, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
-        desc6: 'Pão, carne bovina , presunto, maionese, queijo prato, bacon, ovo, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
-        desc7: 'Pão, carne bovina , presunto, maionese, queijo prato, ovo, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
-        desc8: 'Contra filé, queijo , presunto,pomarola, maionese , alface , tomate , milho , queijo parmessão e batata frita',
-        desc9: 'Contra filé, queijo , presunto,pomarola, maionese , alface , tomate , milho , queijo parmessão e batata frita',
-        desc10: 'Frango desfiado com Catupiry, queijo, presunto, milho, molho especial e batata frita',
-        desc11: 'Peito de frango grelhado, queijo , presunto , maionese , ovo, milho , molho especial , batata frita',
-        desc12: 'Pão, carne bovina , presunto, maionese, milho, batata palha e molho gourmet especial. Acompanha molho verde.',
-        desc13: '2 carnes , 2 ovos, 2 queijos , 2 presunto, dobro bacon, alface ,tomate , milho , molho especial, batata frita .',
-        desc14: '2 carnes goumet Picanha 120 g , queijo cheedar, alface, tomate , cebola roxa , molho especial e batata frita .',
-        desc15: '2 carnes goumet Picanha 120 g , queijo cheedar, alface, tomate , cebola roxa , molho especial e batata frita .',
-        valor1: '11.98',
-        valor2: '11.98',
-        valor3: '11.98',
-        valor4: '11.98',
-        valor5: '11.98',
-        valor6: '11.98',
-        valor7: '11.98',
-        valor8: '11.98',
-        valor9: '11.98',
-        valor10: '11.98',
-        valor11: '11.98',
-        valor12: '11.98',
-        valor13: '11.98',
-        valor14: '11.98',
-        valor15: '11.98',
-        title_option: 'Escolha um tipo de Carne',
-        opt1: 'Bovina',
-        valor_opt1: '0.00',
-        opt2: 'Frango',
-        valor_opt2: '2.00',
-        opt3: 'Suína',
-        valor_opt3: '2.50',
-        title_option1_1: 'Escolha o tipo de Batata',
-        opt1_1: 'Batata-Palha',
-        valor_opt1_1: '0.50',
-        opt2_1: 'Batata-Frita',
-        valor_opt2_1: '1.00'
-
     }).then(() => {
         res.send('Pagina Resetada com Sucesso!')
     }).catch((err) => {
@@ -292,36 +233,10 @@ router.get('/menuburger', (req, res) => {
 
 //rota responsavel por carregar menubebidas, layout client para poder testar a aplicação
 router.get('/menubebidas', (req, res) => {
-    MenuBebidas.create({
+    TemplateMenu.create({
+        class: 'Bebidas',
         title: 'BEBIDAS',
         desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
-        tabela1: 'Item',
-        tabela2: 'Valor',
-        tabela3: 'Alteração',
-        title1: 'Coca-Lata 0.33L',
-        desc1: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer',
-        valor1: '4.00',
-        title2: 'Coca-Lata zero 0.33L',
-        desc2: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer',
-        valor2: '4.00',
-        title3: 'Coca-cola 600ml',
-        desc3: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer',
-        valor3: '6.00',
-        title4: 'Fanta-Laranja 0.33L',
-        desc4: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer',
-        valor4: '4.00',
-        title5: 'H2O 600ml',
-        desc5: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer',
-        valor5: '8.00',
-        title6: 'Ativ-Plus',
-        desc6: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer',
-        valor6: '1.20',
-        title7: 'Mantiqueira 2L',
-        desc7: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer',
-        valor7: '6.00',
-        title8: 'Coca-cola 2l',
-        desc8: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer',
-        valor8: '10.00'
     }).then(() => {
         res.send('Pagina Resetada com Sucesso!')
     }).catch((err) => {
@@ -331,32 +246,10 @@ router.get('/menubebidas', (req, res) => {
 
 //rota responsavel por carregar menupizza, layout client para poder testar a aplicação
 router.get('/menupizzas', (req, res) => {
-    MenuPizza.create({
+    TemplateMenu.create({
+        class: 'Pizza',
         title: 'Best Pizzas',
         desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
-        tabela1: 'Item',
-        tabela2: 'Valor',
-        tabela3: 'Alteração',
-        title1: 'MUSSARELA - ESPECIALIDADES',
-        desc1: 'QUEIJO, MUSSARELA E ORÉGANO',
-        valor1: '30,95',
-        title2: 'MARGHERITA - ESPECIALIDADES',
-        desc2: 'MUSSARELA, TOMATE, MANJERICÃO E ORÉGANO',
-        valor2: '30,00',
-        title3: 'PEPPERONI - ESPECIALIDADES',
-        desc3: 'MUSSARELA, PEPPERONI E OREGANO',
-        valor3: '30,95',
-        title4: 'FRANGO COM REQUEIJÃO - ESPECIALIDADES',
-        desc4: 'FRANGO DESFIADO, REQUEIJÃO E CEBOLA',
-        valor: '30,00',
-        title5: 'VENEZA',
-        desc5: 'MOLHO, MUSSARELA, CATUPIRY, TOMATE, AZEITONA E ORÉGANO',
-        valor5: '32,00',
-        title6: 'CARIOCA',
-        desc6: 'MOLHO, MUSSARELA, OVO, MILHO, TOMATE, AZEITONA, E ORÉGANO',
-        valor6: '31,90',
-
-
     }).then(() => {
         res.send('Pagina resetada com sucesso!')
     }).catch((err) => {
