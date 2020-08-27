@@ -309,9 +309,9 @@ router.get('/userClients', (req, res) => {
                 const pwd = hash
                 Usuarios.create({
                     nome: ' anonimus',
-                    email: 'isaac8.silva@hotmail.com',
+                    email: 'client@gmail.com',
                     password: pwd,
-                    telefone: '988180688',
+                    telefone: '999990688',
                     bairro: 'ano bom',
                     rua: 'ano bom',
                     residencia: '777',
